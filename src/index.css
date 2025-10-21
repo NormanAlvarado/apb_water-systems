@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Swiper Custom Styles */
+.swiper-pagination {
+  bottom: -40px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #cbd5e1;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #3b82f6;
+  width: 32px;
+  border-radius: 6px;
+}
+
+/* Page-specific pagination colors */
+.swiper-pagination-drinking .swiper-pagination-bullet-active {
+  background: #0891b2;
+}
+
+.swiper-pagination-filters .swiper-pagination-bullet-active {
+  background: #6366f1;
+}
