@@ -78,8 +78,8 @@ function Temp() {
                 </div>
                 <div className="flex-1">
                   <p className="text-xs text-gray-500 font-light">Phone</p>
-                  <a href="tel:+50612345678" className="text-sm sm:text-base text-gray-800 hover:text-blue-600 transition-colors duration-200 font-normal">
-                    +506 1234-5678
+                  <a href="tel:+50660339416" className="text-sm sm:text-base text-gray-800 hover:text-blue-600 transition-colors duration-200 font-normal">
+                    +506 6033-9416
                   </a>
                 </div>
               </div>
@@ -92,8 +92,8 @@ function Temp() {
                 </div>
                 <div className="flex-1">
                   <p className="text-xs text-gray-500 font-light">Email</p>
-                  <a href="mailto:info@apbwatersystems.com" className="text-sm sm:text-base text-gray-800 hover:text-blue-600 transition-colors duration-200 font-normal break-all">
-                    info@apbwatersystems.com
+                  <a href="mailto:apbwatersystems@gmail.com" className="text-sm sm:text-base text-gray-800 hover:text-blue-600 transition-colors duration-200 font-normal break-all">
+                    apbwatersystems@gmail.com
                   </a>
                 </div>
               </div>

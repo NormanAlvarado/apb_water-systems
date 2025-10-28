@@ -8,14 +8,14 @@ export default function KnowYourWater() {
       description: "Whether your water comes from a well or municipally treated source, it may contain impurities that cause it to taste or smell bad or create other problems in your home."
     },
     {
-      title: "Why Should I Test My Water?",
+      title: "Why Should I Improve My Water?",
       image: "https://www.bruker.com/de/applications/microbiology-and-diagnostics/water-testing-microbiology/_jcr_content/root/herostage/backgroundImageVPL.coreimg.82.1920.jpeg/1733860544891/water-testing-microbiology-shutterstock-1753533839-md-web.jpeg",
-      description: "A reliable water analysis is the only way to identify the specific impurities in your water that make it less than ideal for household use."
+      description: "Understanding your water quality is the first step to identifying the best treatment solutions for your household needs."
     },
     {
-      title: "How Can I Test My Water?",
+      title: "How Can I Get Better Water?",
       image: "https://www.cdc.gov/drinking-water/media/images/2024/06/GettyImages-1189589855-16x9-1.jpg",
-      description: "You can buy a DIY water testing kit, but you'll get more reliable results and helpful solutions with a complimentary in-home water test from the experts at APB Water Systems."
+      description: "Contact our water treatment experts to find the perfect filtration and conditioning system for your home, backed by our expertise and quality products."
     }
   ]
 
@@ -80,7 +80,7 @@ export default function KnowYourWater() {
         {/* CTA Button */}
         <div className="text-center mt-12">
           <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all hover:shadow-2xl transform hover:-translate-y-1">
-            Schedule Free Water Test
+            Contact Us Today
           </button>
         </div>
       </div>

@@ -1,17 +1,9 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation, Autoplay } from 'swiper/modules'
-// @ts-ignore
-import 'swiper/css'
-// @ts-ignore
-import 'swiper/css/pagination'
-// @ts-ignore
-import 'swiper/css/navigation'
 
 export default function WaterConditioning() {
 
-  const modelsBase = [
+  const models = [
     {
       name: "EC5 Water Conditioning System",
       description: "Our flagship water softener with advanced technology and smart performance",
@@ -35,36 +27,6 @@ export default function WaterConditioning() {
       description: "Twin-tank system for continuous soft water",
       features: ["Continuous operation", "No downtime", "High capacity", "Commercial grade"],
       image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop"
-    }
-  ]
-
-  // Duplicate models multiple times to ensure smooth infinite loop with 3 visible slides
-  const models = [...modelsBase, ...modelsBase]
-
-  const benefits = [
-    {
-      title: "Softer Skin & Hair",
-      description: "Say goodbye to dry skin and brittle hair. Soft water leaves you feeling clean and refreshed."
-    },
-    {
-      title: "Better Soap Performance",
-      description: "Enjoy luxurious lather with less soap, saving money and reducing residue."
-    },
-    {
-      title: "Protect Your Appliances",
-      description: "Prevent costly repairs and extend the life of water-using appliances by eliminating scale buildup."
-    },
-    {
-      title: "Lower Energy Bills",
-      description: "Scale-free appliances run more efficiently, reducing your energy consumption and costs."
-    },
-    {
-      title: "Cleaner Dishes & Laundry",
-      description: "No more spots on glassware or dingy clothes. Everything comes out cleaner and brighter."
-    },
-    {
-      title: "Preserve Plumbing",
-      description: "Eliminate mineral deposits that clog pipes and reduce water flow throughout your home."
     }
   ]
 
@@ -96,9 +58,6 @@ export default function WaterConditioning() {
             <p className="text-xl md:text-2xl text-cyan-100 mb-8 leading-relaxed">
               Transform ordinary water into extraordinary water with RainSoft's technologically advanced water softeners
             </p>
-            <button className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-cyan-50 transition-all hover:shadow-2xl transform hover:-translate-y-1">
-              Schedule Free Water Test
-            </button>
           </div>
         </div>
       </section>
@@ -181,7 +140,7 @@ export default function WaterConditioning() {
         </div>
       </section>
 
-      {/* Models Section with Carousel */}
+      {/* Models Section with Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
@@ -194,91 +153,31 @@ export default function WaterConditioning() {
               </p>
             </div>
             
-            {/* Swiper Carousel */}
-            <div className="w-full relative">
-              <Swiper
-                modules={[Pagination, Navigation, Autoplay]}
-                centeredSlides={true}
-                loop={true}
-                slidesPerGroup={1}
-                loopAdditionalSlides={3}
-                spaceBetween={30}
-                autoplay={{
-                  delay: 4000,
-                  disableOnInteraction: false,
-                }}
-                speed={800}
-                pagination={{
-                  clickable: true,
-                  el: '.swiper-pagination'
-                }}
-                navigation={{
-                  nextEl: '.swiper-button-next-custom',
-                  prevEl: '.swiper-button-prev-custom',
-                }}
-                breakpoints={{
-                  320: {
-                    slidesPerView: 1.2,
-                    spaceBetween: 10
-                  },
-                  640: {
-                    slidesPerView: 2.2,
-                    spaceBetween: 20
-                  },
-                  768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                  }
-                }}
-                className="pb-16"
-              >
-                {models.map((model, index) => (
-                  <SwiperSlide key={index} className="h-auto">
-                    <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 mx-4 flex flex-col min-h-[450px] sm:min-h-[480px]">
-                      {/* Product Image */}
-                      <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
-                        <img 
-                          src={model.image} 
-                          alt={model.name}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                        />
-                      </div>
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {models.map((model, index) => (
+                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
+                  {/* Product Image */}
+                  <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
+                    <img 
+                      src={model.image} 
+                      alt={model.name}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
 
-                      {/* Product Content */}
-                      <div className="p-4 sm:p-6 flex flex-col flex-grow">
-                        <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 line-clamp-2 min-h-[3.5rem]">
-                          {model.name}
-                        </h3>
+                  {/* Product Content */}
+                  <div className="p-6 flex flex-col items-center text-center flex-grow">
+                    <h3 className="text-xl font-bold text-blue-600 mb-4 min-h-[3.5rem] flex items-center">
+                      {model.name}
+                    </h3>
 
-                        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors duration-300 text-sm sm:text-base mt-auto">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-
-              {/* Custom Navigation Buttons */}
-              <button
-                className="swiper-button-prev-custom absolute left-0 top-1/3 -translate-y-1/2 bg-white hover:bg-blue-50 text-blue-600 rounded-full p-3 shadow-lg hover:shadow-xl transition-all z-10 border-2 border-blue-200"
-                aria-label="Previous"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                className="swiper-button-next-custom absolute right-0 top-1/3 -translate-y-1/2 bg-white hover:bg-blue-50 text-blue-600 rounded-full p-3 shadow-lg hover:shadow-xl transition-all z-10 border-2 border-blue-200"
-                aria-label="Next"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-
-              {/* Pagination */}
-              <div className="swiper-pagination"></div>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto">
+                      Get Quote
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -337,19 +236,11 @@ export default function WaterConditioning() {
                   Ready to Experience Soft Water?
                 </h3>
                 <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                  Schedule a free in-home water test and discover which RainSoft water conditioning system is right for your family.
+                  Contact us today to learn more about which RainSoft water conditioning system is right for your family.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <button className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all transform hover:-translate-y-1 hover:scale-105">
-                    Get Your Free Water Test
-                  </button>
-                  <button className="border-2 border-blue-600 text-blue-600 px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all">
-                    Call Us Now
-                  </button>
-                </div>
-                <p className="text-gray-500 text-sm mt-6">
-                  💧 No obligation • Free water analysis • Expert consultation
-                </p>
+                <button className="border-2 border-blue-600 text-blue-600 px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all">
+                  Call Us Now
+                </button>
               </div>
             </div>
           </div>

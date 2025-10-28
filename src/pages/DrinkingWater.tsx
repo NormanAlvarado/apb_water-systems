@@ -1,17 +1,9 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation, Autoplay } from 'swiper/modules'
-// @ts-ignore
-import 'swiper/css'
-// @ts-ignore
-import 'swiper/css/pagination'
-// @ts-ignore
-import 'swiper/css/navigation'
 
 export default function DrinkingWater() {
 
-  const systemsBase = [
+  const systems = [
     {
       name: "Ultrefiner II - Multi-Stage Reverse Osmosis System",
       description: "Multi-stage drinking water purifier that produces better than bottle-quality water",
@@ -25,9 +17,6 @@ export default function DrinkingWater() {
       image: "https://www.bruker.com/de/applications/microbiology-and-diagnostics/water-testing-microbiology/_jcr_content/root/herostage/backgroundImageVPL.coreimg.82.1920.jpeg/1733860544891/water-testing-microbiology-shutterstock-1753533839-md-web.jpeg"
     }
   ]
-
-  // Duplicate systems multiple times for smooth infinite loop
-  const systems = [...systemsBase, ...systemsBase, ...systemsBase]
 
   const benefits = [
     {
@@ -84,9 +73,6 @@ export default function DrinkingWater() {
             <p className="text-xl md:text-2xl text-cyan-100 mb-8 leading-relaxed">
               Transform your kitchen tap into a fountain of delicious, pure drinking water
             </p>
-            <button className="bg-white text-cyan-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-cyan-50 transition-all hover:shadow-2xl transform hover:-translate-y-1">
-              Get Free Water Analysis
-            </button>
           </div>
         </div>
       </section>
@@ -193,7 +179,7 @@ export default function DrinkingWater() {
         </div>
       </section>
 
-      {/* Systems Section with Carousel */}
+      {/* Systems Section with Grid */}
       <section className="py-20 bg-gradient-to-br from-cyan-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
@@ -206,91 +192,31 @@ export default function DrinkingWater() {
               </p>
             </div>
             
-            {/* Swiper Carousel */}
-            <div className="w-full relative">
-              <Swiper
-                modules={[Pagination, Navigation, Autoplay]}
-                centeredSlides={true}
-                loop={true}
-                slidesPerGroup={1}
-                loopAdditionalSlides={3}
-                spaceBetween={30}
-                autoplay={{
-                  delay: 4000,
-                  disableOnInteraction: false,
-                }}
-                speed={800}
-                pagination={{
-                  clickable: true,
-                  el: '.swiper-pagination-drinking'
-                }}
-                navigation={{
-                  nextEl: '.swiper-button-next-drinking',
-                  prevEl: '.swiper-button-prev-drinking',
-                }}
-                breakpoints={{
-                  320: {
-                    slidesPerView: 1.2,
-                    spaceBetween: 10
-                  },
-                  640: {
-                    slidesPerView: 2.2,
-                    spaceBetween: 20
-                  },
-                  768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                  }
-                }}
-                className="pb-16"
-              >
-                {systems.map((system, index) => (
-                  <SwiperSlide key={index} className="h-auto">
-                    <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 mx-4 flex flex-col min-h-[450px] sm:min-h-[480px]">
-                      {/* Product Image */}
-                      <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
-                        <img 
-                          src={system.image} 
-                          alt={system.name}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                        />
-                      </div>
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {systems.map((system, index) => (
+                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
+                  {/* Product Image */}
+                  <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
+                    <img 
+                      src={system.image} 
+                      alt={system.name}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
 
-                      {/* Product Content */}
-                      <div className="p-4 sm:p-6 flex flex-col flex-grow">
-                        <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 line-clamp-2 min-h-[3.5rem]">
-                          {system.name}
-                        </h3>
+                  {/* Product Content */}
+                  <div className="p-6 flex flex-col items-center text-center flex-grow">
+                    <h3 className="text-xl font-bold text-cyan-600 mb-4 min-h-[3.5rem] flex items-center">
+                      {system.name}
+                    </h3>
 
-                        <button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors duration-300 text-sm sm:text-base mt-auto">
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-
-              {/* Custom Pagination */}
-              <div className="swiper-pagination-drinking"></div>
-
-              {/* Custom Navigation Buttons */}
-              <button
-                className="swiper-button-prev-drinking absolute left-0 top-1/3 -translate-y-1/2 bg-white hover:bg-cyan-50 text-cyan-600 rounded-full p-3 shadow-lg hover:shadow-xl transition-all z-10 border-2 border-cyan-200"
-                aria-label="Previous"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                className="swiper-button-next-drinking absolute right-0 top-1/3 -translate-y-1/2 bg-white hover:bg-cyan-50 text-cyan-600 rounded-full p-3 shadow-lg hover:shadow-xl transition-all z-10 border-2 border-cyan-200"
-                aria-label="Next"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
+                    <button className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto">
+                      Get Quote
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
