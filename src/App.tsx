@@ -6,18 +6,24 @@ import Temp from './pages/Temp'
 import WaterConditioning from './pages/WaterConditioning'
 import DrinkingWater from './pages/DrinkingWater'
 import ProblemSolvingFilters from './pages/ProblemSolvingFilters'
+import ConstantPressure from './pages/ConstantPressure'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Temp />} />
-      <Route path="/devhome" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/products/water-conditioning" element={<WaterConditioning />} />
-      <Route path="/products/drinking-water" element={<DrinkingWater />} />
-      <Route path="/products/problem-solving-filters" element={<ProblemSolvingFilters />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Temp />} />
+        <Route path="/devhome" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/products/water-conditioning" element={<WaterConditioning />} />
+        <Route path="/products/drinking-water" element={<DrinkingWater />} />
+        <Route path="/products/problem-solving-filters" element={<ProblemSolvingFilters />} />
+        <Route path="/products/constant-pressure" element={<ConstantPressure />} />
+      </Routes>
+      <WhatsAppButton />
+    </>
   )
 }
 

@@ -1,32 +1,38 @@
+import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import QuoteModal from '../components/QuoteModal'
 
 export default function WaterConditioning() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState('')
+
+  const handleGetQuote = (productName: string) => {
+    setSelectedProduct(productName)
+    setIsModalOpen(true)
+  }
 
   const models = [
     {
       name: "EC5 Water Conditioning System",
-      description: "Our flagship water softener with advanced technology and smart performance",
-      features: ["Smart digital controls", "High efficiency", "Space-saving design", "Industry-leading warranty"],
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=300&fit=crop"
-    },
-    {
-      name: "EC5-CAB Water Conditioning System",
-      description: "Premium cabinet-style system for seamless integration",
-      features: ["Elegant cabinet design", "Compact footprint", "Advanced filtration", "Easy maintenance"],
-      image: "https://images.unsplash.com/photo-1604754742629-3e768b8e3169?w=400&h=300&fit=crop"
+      description: "Our newest and most premium water softener with computerized control and high efficiency",
+      features: ["Computerized smart controls", "Premium performance", "Space-saving design", "Industry-leading efficiency"],
+      image: "https://images.thdstatic.com/productImages/0a966ba0-79bb-4d66-abe0-eafff16c48bf/svn/rainsoft-water-softener-systems-hdinstiec5ws-64_600.jpg",
+      brand: "RainSoft"
     },
     {
       name: "EC4 Water Conditioning System",
-      description: "Reliable performance with proven technology",
-      features: ["Dependable operation", "Cost-effective", "Simple controls", "Durable construction"],
-      image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&h=300&fit=crop"
+      description: "Previous premium model with proven technology and reliable performance",
+      features: ["Dependable operation", "Proven technology", "Advanced controls", "Durable construction"],
+      image: "https://images.thdstatic.com/productImages/7e580f9a-d5e7-4bc7-a8c9-31a5fe149632/svn/rainsoft-water-softener-systems-hdinstiec4ws-64_600.jpg",
+      brand: "RainSoft"
     },
     {
       name: "TC-M Series Water Conditioning System",
-      description: "Twin-tank system for continuous soft water",
-      features: ["Continuous operation", "No downtime", "High capacity", "Commercial grade"],
-      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop"
+      description: "Meter-controlled system as a more standard option for consistent soft water",
+      features: ["Meter-controlled", "Standard reliability", "Cost-effective", "Simple operation"],
+      image: "https://images.thdstatic.com/productImages/0201647d-ef4d-4e2d-8a79-20722d382a99/svn/rainsoft-water-softener-systems-hdinstitws-64_600.jpg",
+      brand: "RainSoft"
     }
   ]
 
@@ -85,7 +91,7 @@ export default function WaterConditioning() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=600&fit=crop" 
+                    src="https://c02.purpledshub.com/uploads/sites/41/2018/07/GettyImages-503847945-de8171f.jpg" 
                     alt="Water Softener System"
                     className="w-full h-full object-cover"
                   />
@@ -154,7 +160,7 @@ export default function WaterConditioning() {
             </div>
             
             {/* Products Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {models.map((model, index) => (
                 <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
                   {/* Product Image */}
@@ -162,7 +168,7 @@ export default function WaterConditioning() {
                     <img 
                       src={model.image} 
                       alt={model.name}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      className="w-full h-full object-contain transition-transform duration-500 hover:scale-110 p-4"
                     />
                   </div>
 
@@ -172,7 +178,10 @@ export default function WaterConditioning() {
                       {model.name}
                     </h3>
 
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto">
+                    <button 
+                      onClick={() => handleGetQuote(model.name)}
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto"
+                    >
                       Get Quote
                     </button>
                   </div>
@@ -182,6 +191,12 @@ export default function WaterConditioning() {
           </div>
         </div>
       </section>
+
+      <QuoteModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        productName={selectedProduct}
+      />
 
       {/* Quality Assurance Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-cyan-800 relative overflow-hidden">
@@ -222,30 +237,7 @@ export default function WaterConditioning() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-cyan-50 to-white"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-blue-100">
-              <div className="text-center">
-                <div className="inline-block bg-blue-100 text-blue-700 px-6 py-2 rounded-full text-sm font-semibold mb-6">
-                  START YOUR JOURNEY TO BETTER WATER
-                </div>
-                <h3 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                  Ready to Experience Soft Water?
-                </h3>
-                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                  Contact us today to learn more about which RainSoft water conditioning system is right for your family.
-                </p>
-                <button className="border-2 border-blue-600 text-blue-600 px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all">
-                  Call Us Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       <Footer />
     </div>

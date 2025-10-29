@@ -1,59 +1,64 @@
+import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import QuoteModal from '../components/QuoteModal'
 
 export default function ProblemSolvingFilters() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState('')
+
+  const handleGetQuote = (productName: string) => {
+    setSelectedProduct(productName)
+    setIsModalOpen(true)
+  }
 
   const filters = [
     {
-      name: "Iron Filter System",
+      name: "EC4 OxyTech Whole-House Water Filtration System",
       icon: "🏠",
-      description: "Advanced iron removal for clear, stain-free water",
-      benefits: ["Removes iron & rust", "Prevents staining", "Protects fixtures", "Automatic backwash"],
-      image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400&h=300&fit=crop"
+      description: "Automatic, chemical-free system for iron, sulfur, and manganese removal",
+      benefits: ["Chemical-free operation", "Removes iron, sulfur & manganese", "Automatic system", "Whole-house protection"],
+      image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400&h=300&fit=crop",
+      brand: "RainSoft"
     },
     {
-      name: "Sulfur Filter System",
+      name: "EC5 OxyTech Whole-House Water Filtration System",
       icon: "💡",
-      description: "Eliminate rotten egg odor from your water",
-      benefits: ["Removes sulfur smell", "Fresh, clean water", "No chemicals needed", "Low maintenance"],
-      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&h=300&fit=crop"
+      description: "Latest version for iron, sulfur, and manganese with integrated system design",
+      benefits: ["Newest technology", "Integrated design", "Superior performance", "Easy operation"],
+      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&h=300&fit=crop",
+      brand: "RainSoft of NE Iowa"
     },
     {
-      name: "Whole House Carbon Filter",
+      name: "RCUV™ Ultraviolet Water Disinfection System",
       icon: "⚡",
-      description: "Comprehensive filtration for the entire home",
-      benefits: ["Removes chlorine", "Reduces VOCs", "Better taste & odor", "Protects all water"],
-      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop"
+      description: "UV disinfection solution for problematic water sources",
+      benefits: ["UV disinfection", "Chemical-free", "Kills bacteria & viruses", "Safe water solution"],
+      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop",
+      brand: "RainSoft"
     },
     {
-      name: "Lead Removal System",
+      name: "Whole-House Carbon Filtration System",
       icon: "🔧",
-      description: "Protect your family from harmful lead contamination",
-      benefits: ["99% lead removal", "NSF certified", "Safe drinking water", "Peace of mind"],
-      image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&h=300&fit=crop"
+      description: "Carbon filter for entire home to remove odors, tastes, and chlorine",
+      benefits: ["Removes chlorine", "Eliminates odors", "Improves taste", "Whole-house coverage"],
+      image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&h=300&fit=crop",
+      brand: "RainSoft"
     }
   ]
 
   const benefits = [
     {
-      title: "Remove Iron & Rust",
-      description: "Eliminate rust stains on fixtures, clothing, and surfaces caused by iron in your water."
+      title: "Chemical-Free Filtration",
+      description: "OxyTech systems remove iron, sulfur, and manganese without harsh chemicals."
     },
     {
-      title: "Eliminate Odors",
-      description: "Say goodbye to unpleasant sulfur and rotten egg smells that make water unusable."
+      title: "UV Disinfection",
+      description: "RCUV™ system kills bacteria and viruses using advanced ultraviolet technology."
     },
     {
-      title: "Remove Contaminants",
-      description: "Filter out lead, arsenic, bacteria, and other harmful substances for safer water."
-    },
-    {
-      title: "Protect Appliances",
-      description: "Prevent damage to water heaters, dishwashers, and washing machines from water problems."
-    },
-    {
-      title: "Better Taste & Clarity",
-      description: "Enjoy crystal-clear water that tastes fresh without sediment or discoloration."
+      title: "Better Taste & Odor",
+      description: "Carbon filtration removes chlorine, improving taste and eliminating odors."
     },
     {
       title: "Whole-Home Protection",
@@ -227,7 +232,10 @@ export default function ProblemSolvingFilters() {
                       {filter.name}
                     </h3>
 
-                    <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto">
+                    <button 
+                      onClick={() => handleGetQuote(filter.name)}
+                      className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto"
+                    >
                       Get Quote
                     </button>
                   </div>
@@ -237,6 +245,12 @@ export default function ProblemSolvingFilters() {
           </div>
         </div>
       </section>
+
+      <QuoteModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        productName={selectedProduct}
+      />
 
       {/* Quality Assurance Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 text-white">

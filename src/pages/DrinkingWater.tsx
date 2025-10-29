@@ -1,20 +1,38 @@
+import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import QuoteModal from '../components/QuoteModal'
 
 export default function DrinkingWater() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState('')
+
+  const handleGetQuote = (productName: string) => {
+    setSelectedProduct(productName)
+    setIsModalOpen(true)
+  }
 
   const systems = [
     {
-      name: "Ultrefiner II - Multi-Stage Reverse Osmosis System",
-      description: "Multi-stage drinking water purifier that produces better than bottle-quality water",
-      features: ["Three-stage filtration", "Carbon block pre-filter", "Advanced membrane", "Post-filter protection"],
-      image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&h=400&fit=crop"
+      name: "Ultrefiner II Premium Drinking Water System",
+      description: "Under-sink reverse osmosis system delivering better-than-bottle quality water for your home",
+      features: ["Reverse osmosis technology", "Under-sink installation", "Premium filtration", "Better than bottled water quality"],
+      image: "https://www.rainsoft.com/wp-content/uploads/2013/07/ultrefinerII.png.webp",
+      brand: "RainSoft"
     },
     {
-      name: "Hydrefiner II - Advanced Carbon Block Filter System",
-      description: "Advanced carbon block filter for continuous supply of delicious drinking water",
-      features: ["Advanced carbon block", "Continuous filtered water", "Removes chlorine", "Easy replacement"],
-      image: "https://www.bruker.com/de/applications/microbiology-and-diagnostics/water-testing-microbiology/_jcr_content/root/herostage/backgroundImageVPL.coreimg.82.1920.jpeg/1733860544891/water-testing-microbiology-shutterstock-1753533839-md-web.jpeg"
+      name: "Hydrefiner II Drinking Water System",
+      description: "Compressed carbon filter for under-sink installation with continuous performance",
+      features: ["Compressed carbon block", "Under-sink design", "Continuous performance", "Easy maintenance"],
+      image: "https://i.ytimg.com/vi/okDwlq_YsxI/maxresdefault.jpg",
+      brand: "Lifetime Solutions"
+    },
+    {
+      name: "Ultrefiner Elite",
+      description: "Premium variant of the Ultrefiner with enhanced features and superior performance",
+      features: ["Premium filtration", "Enhanced capacity", "Superior performance", "Advanced technology"],
+      image: "https://www.rainsoft.com/wp-content/uploads/2025/05/ultrefiner-elite-768x432.jpg.webp",
+      brand: "RainSoft"
     }
   ]
 
@@ -103,7 +121,7 @@ export default function DrinkingWater() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=600&fit=crop" 
+                    src="https://www.cdc.gov/environmental-health-tracking/media/images/DrinkingWater1200x675.jpg" 
                     alt="Drinking Water System"
                     className="w-full h-full object-cover"
                   />
@@ -155,7 +173,7 @@ export default function DrinkingWater() {
 
               {/* Stats Bar */}
               <div className="mt-16 bg-gradient-to-r from-cyan-900 to-blue-800 rounded-lg p-8 text-white">
-                <div className="grid md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
                   <div>
                     <div className="text-4xl font-bold mb-2">99%</div>
                     <div className="text-cyan-100 text-sm uppercase tracking-wide">Contaminant Removal</div>
@@ -163,10 +181,6 @@ export default function DrinkingWater() {
                   <div>
                     <div className="text-4xl font-bold mb-2">$500+</div>
                     <div className="text-cyan-100 text-sm uppercase tracking-wide">Annual Savings vs Bottled</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold mb-2">5</div>
-                    <div className="text-cyan-100 text-sm uppercase tracking-wide">Filtration Stages</div>
                   </div>
                   <div>
                     <div className="text-4xl font-bold mb-2">24/7</div>
@@ -195,13 +209,13 @@ export default function DrinkingWater() {
             {/* Products Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {systems.map((system, index) => (
-                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
+                <div key={index} className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full ${index === 2 ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''}`}>
                   {/* Product Image */}
-                  <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
+                  <div className="aspect-video overflow-hidden bg-gray-100 flex-shrink-0">
                     <img 
                       src={system.image} 
                       alt={system.name}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      className="w-full h-full object-contain transition-transform duration-500 hover:scale-110"
                     />
                   </div>
 
@@ -211,7 +225,10 @@ export default function DrinkingWater() {
                       {system.name}
                     </h3>
 
-                    <button className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto">
+                    <button 
+                      onClick={() => handleGetQuote(system.name)}
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto"
+                    >
                       Get Quote
                     </button>
                   </div>
@@ -221,6 +238,12 @@ export default function DrinkingWater() {
           </div>
         </div>
       </section>
+
+      <QuoteModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        productName={selectedProduct}
+      />
 
       {/* Quality Assurance Section */}
       <section className="py-20 bg-gradient-to-br from-cyan-900 via-blue-900 to-cyan-800 text-white">
