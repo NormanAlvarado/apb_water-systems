@@ -26,7 +26,7 @@ function Temp() {
       <div className="relative z-10 w-full max-w-6xl px-4">
         
         {/* Top Section - Logo and Branding */}
-        <ScrollAnimation animation="wave">
+        <ScrollAnimation animation="fade-up">
           <div className="flex flex-col items-center mb-8 sm:mb-12">
             {/* APB Logo - Circular */}
             <div className="relative mb-6">

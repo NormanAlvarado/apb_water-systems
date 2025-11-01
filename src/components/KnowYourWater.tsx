@@ -41,7 +41,7 @@ export default function KnowYourWater() {
         </ScrollAnimation>
 
         {/* Title with Icon */}
-        <ScrollAnimation animation="ripple" delay={200}>
+        <ScrollAnimation animation="fade-up" delay={200}>
           <div className="flex items-center justify-center mb-12">
             <svg className="w-16 h-16 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
@@ -49,7 +49,7 @@ export default function KnowYourWater() {
           </div>
         </ScrollAnimation>
 
-        <ScrollAnimation animation="wave" delay={400}>
+        <ScrollAnimation animation="fade-up" delay={400}>
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
             Know Your Water
           </h2>

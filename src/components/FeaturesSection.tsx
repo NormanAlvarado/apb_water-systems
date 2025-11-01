@@ -16,7 +16,7 @@ export default function FeaturesSection() {
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-3 gap-6">
-            <ScrollAnimation animation="ripple">
+            <ScrollAnimation animation="fade-up">
               <div className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@ export default function FeaturesSection() {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animation="ripple" delay={200}>
+            <ScrollAnimation animation="fade-up" delay={200}>
               <div className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
                 <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@ export default function FeaturesSection() {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animation="ripple" delay={400}>
+            <ScrollAnimation animation="fade-up" delay={400}>
               <div className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
