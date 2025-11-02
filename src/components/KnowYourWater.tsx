@@ -1,5 +1,4 @@
 import knowBg from '../assets/knowBG.png'
-import ScrollAnimation from './ScrollAnimation'
 
 export default function KnowYourWater() {
   const waterInsights = [
@@ -32,46 +31,36 @@ export default function KnowYourWater() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <ScrollAnimation animation="fade-down">
-          <div className="text-center mb-4">
-            <p className="text-white text-base font-semibold tracking-widest uppercase mb-2 drop-shadow-lg">
-              Water Insights
-            </p>
-          </div>
-        </ScrollAnimation>
+        <div className="text-center mb-4">
+          <p className="text-white text-base font-semibold tracking-widest uppercase mb-2 drop-shadow-lg">
+            Water Insights
+          </p>
+        </div>
 
         {/* Title with Icon */}
-        <ScrollAnimation animation="fade-up" delay={200}>
-          <div className="flex items-center justify-center mb-12">
-            <svg className="w-16 h-16 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
-            </svg>
-          </div>
-        </ScrollAnimation>
+        <div className="flex items-center justify-center mb-12">
+          <svg className="w-16 h-16 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
+          </svg>
+        </div>
 
-        <ScrollAnimation animation="fade-up" delay={400}>
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
-            Know Your Water
-          </h2>
-        </ScrollAnimation>
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+          Know Your Water
+        </h2>
 
         {/* Cards Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {waterInsights.map((insight, index) => (
-            <ScrollAnimation 
+            <div 
               key={index}
-              animation="slide-left"
-              delay={index * 200}
+              className="bg-white rounded-lg overflow-hidden shadow-2xl hover:shadow-2xl transition-shadow group"
             >
-              <div 
-                className="bg-white rounded-lg overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 group"
-              >
                 {/* Image */}
                 <div className="aspect-[4/3] overflow-hidden bg-gray-200">
                   <img 
                     src={insight.image} 
                     alt={insight.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
@@ -85,7 +74,6 @@ export default function KnowYourWater() {
                   </p>
                 </div>
               </div>
-            </ScrollAnimation>
           ))}
         </div>
 

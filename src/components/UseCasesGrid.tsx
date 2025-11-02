@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import ScrollAnimation from './ScrollAnimation'
 
 
 export default function UseCasesGrid() {
@@ -33,27 +32,21 @@ export default function UseCasesGrid() {
   return (
     <section id="products-section" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50">
       <div className="container mx-auto px-4">
-        <ScrollAnimation animation="fade">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Our Products
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover our complete range of water treatment solutions designed for your home and business
-            </p>
-          </div>
-        </ScrollAnimation>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Our Products
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Discover our complete range of water treatment solutions designed for your home and business
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {products.map((product, index) => (
-            <ScrollAnimation 
+            <div 
               key={index}
-              animation="fade"
-              delay={index * 100}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group h-full flex flex-col"
             >
-              <div 
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group h-full flex flex-col"
-              >
                 {/* Image */}
                 <div className="aspect-video overflow-hidden">
                   <img 
@@ -81,7 +74,6 @@ export default function UseCasesGrid() {
                   </Link>
                 </div>
               </div>
-            </ScrollAnimation>
           ))}
         </div>
       </div>

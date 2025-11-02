@@ -1,6 +1,5 @@
 import apbLogo from '../assets/APBWSWhite.jpeg'
 import rainsoftLogo from '../assets/logo.png'
-import ScrollAnimation from '../components/ScrollAnimation'
 
 function Temp() {
   return (
@@ -10,8 +9,7 @@ function Temp() {
       <div className="relative z-10 w-full max-w-6xl px-4">
         
         {/* Top Section - Logo and Branding */}
-        <ScrollAnimation animation="fade">
-          <div className="flex flex-col items-center mb-8 sm:mb-12">
+        <div className="flex flex-col items-center mb-8 sm:mb-12">
             {/* APB Logo - Circular */}
             <div className="relative mb-6">
               <img 
@@ -33,14 +31,12 @@ function Temp() {
               className="w-32 sm:w-40 md:w-48 h-auto" 
             />
           </div>
-        </ScrollAnimation>
         
         {/* Middle Section - Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch max-w-4xl mx-auto">
           
           {/* Left Column - Construction Message */}
-          <ScrollAnimation animation="fade">
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col">
               <div className="text-center lg:text-left flex-1 flex flex-col justify-center">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800 mb-4 tracking-tight">
                   Website Under Construction
@@ -51,11 +47,9 @@ function Temp() {
                 </p>
               </div>
             </div>
-          </ScrollAnimation>
           
           {/* Right Column - Contact Card */}
-          <ScrollAnimation animation="fade">
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col">
               <h3 className="text-xl sm:text-2xl font-medium text-gray-800 mb-6 text-center lg:text-left tracking-wide">
                 Get in Touch
               </h3>
@@ -89,7 +83,6 @@ function Temp() {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
           
         </div>
       </div>
