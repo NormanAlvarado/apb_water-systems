@@ -17,7 +17,7 @@ body {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -28,7 +28,7 @@ body {
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
@@ -39,7 +39,7 @@ body {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-10px);
   }
   to {
     opacity: 1;
@@ -50,7 +50,7 @@ body {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(10px);
   }
   to {
     opacity: 1;
@@ -60,53 +60,53 @@ body {
 
 /* Animation Classes */
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out forwards;
 }
 
 .animate-fade-in-down {
-  animation: fadeInDown 0.6s ease-out forwards;
+  animation: fadeInDown 0.4s ease-out forwards;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out forwards;
+  animation: slideInLeft 0.4s ease-out forwards;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.6s ease-out forwards;
+  animation: slideInRight 0.4s ease-out forwards;
 }
 
 /* Simple aliases for easier use */
 .animate-wave-in {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out forwards;
 }
 
 .animate-ripple {
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
 .animate-float-up {
-  animation: fadeInUp 0.7s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out forwards;
 }
 
 /* Delay utilities */
+.animation-delay-100 {
+  animation-delay: 0.1s;
+}
+
 .animation-delay-200 {
   animation-delay: 0.2s;
 }
 
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
 .animation-delay-400 {
   animation-delay: 0.4s;
-}
-
-.animation-delay-600 {
-  animation-delay: 0.6s;
-}
-
-.animation-delay-800 {
-  animation-delay: 0.8s;
 }
 
 /* Initial state for animations */

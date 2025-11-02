@@ -33,7 +33,7 @@ export default function UseCasesGrid() {
   return (
     <section id="products-section" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50">
       <div className="container mx-auto px-4">
-        <ScrollAnimation animation="fade-down">
+        <ScrollAnimation animation="fade">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               Our Products
@@ -48,18 +48,18 @@ export default function UseCasesGrid() {
           {products.map((product, index) => (
             <ScrollAnimation 
               key={index}
-              animation="fade-up"
-              delay={index * 200}
+              animation="fade"
+              delay={index * 100}
             >
               <div 
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group h-full flex flex-col"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group h-full flex flex-col"
               >
                 {/* Image */}
                 <div className="aspect-video overflow-hidden">
                   <img 
                     src={product.image} 
                     alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
@@ -75,7 +75,7 @@ export default function UseCasesGrid() {
                   {/* Learn More Button */}
                   <Link 
                     to={product.link}
-                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-blue-700 transition-all hover:shadow-lg text-center"
+                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-blue-700 transition text-center"
                   >
                     Learn More
                   </Link>

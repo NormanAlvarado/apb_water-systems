@@ -9,7 +9,7 @@ interface ScrollAnimationProps {
 
 export default function ScrollAnimation({ 
   children, 
-  animation = 'fade-up', 
+  animation = 'fade', 
   delay = 0,
   className = '' 
 }: ScrollAnimationProps) {
@@ -19,11 +19,11 @@ export default function ScrollAnimation({
     'fade': 'animate-fade-in',
     'fade-up': 'animate-fade-in-up',
     'fade-down': 'animate-fade-in-down',
-    'slide-left': 'animate-slide-in-left',
-    'slide-right': 'animate-slide-in-right',
-    'wave': 'animate-fade-in-up', // Simplified to fade-up
-    'ripple': 'animate-fade-in', // Simplified to fade
-    'float': 'animate-fade-in-up' // Simplified to fade-up
+    'slide-left': 'animate-fade-in',
+    'slide-right': 'animate-fade-in',
+    'wave': 'animate-fade-in',
+    'ripple': 'animate-fade-in',
+    'float': 'animate-fade-in'
   }[animation]
 
   const delayClass = delay > 0 ? `animation-delay-${delay}` : ''

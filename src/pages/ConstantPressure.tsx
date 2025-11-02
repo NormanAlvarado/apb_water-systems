@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
+import PageLoader from '../components/PageLoader'
 
 export default function ConstantPressure() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -42,6 +43,7 @@ export default function ConstantPressure() {
 
   return (
     <div className="min-h-screen">
+      <PageLoader />
       <Header />
       
       {/* Hero Section */}
