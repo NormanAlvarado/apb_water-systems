@@ -153,14 +153,14 @@ export default function DrinkingWater() {
                 {benefits.map((benefit, index) => (
                   <div 
                     key={index}
-                    className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 hover:border-cyan-400"
+                    className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-200"
                   >
                     {/* Cyan top bar */}
                     <div className="h-2 bg-gradient-to-r from-cyan-600 to-blue-500"></div>
                     
                     <div className="p-6">
                       {/* Content */}
-                      <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                      <h4 className="text-lg font-bold text-gray-900 mb-3">
                         {benefit.title}
                       </h4>
                       <p className="text-gray-600 leading-relaxed text-sm">
@@ -209,13 +209,13 @@ export default function DrinkingWater() {
             {/* Products Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {systems.map((system, index) => (
-                <div key={index} className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full ${index === 2 ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''}`}>
+                <div key={index} className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full ${index === 2 ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''}`}>
                   {/* Product Image */}
                   <div className="aspect-video overflow-hidden bg-gray-100 flex-shrink-0">
                     <img 
                       src={system.image} 
                       alt={system.name}
-                      className="w-full h-full object-contain transition-transform duration-500 hover:scale-110"
+                      className="w-full h-full object-contain"
                     />
                   </div>
 
@@ -227,7 +227,7 @@ export default function DrinkingWater() {
 
                     <button 
                       onClick={() => handleGetQuote(system.name)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto"
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors mt-auto"
                     >
                       Get Quote
                     </button>

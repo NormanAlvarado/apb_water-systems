@@ -156,14 +156,14 @@ export default function ProblemSolvingFilters() {
                 {benefits.map((benefit, index) => (
                   <div 
                     key={index}
-                    className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 hover:border-indigo-400"
+                    className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-200"
                   >
                     {/* Indigo top bar */}
                     <div className="h-2 bg-gradient-to-r from-indigo-600 to-purple-500"></div>
                     
                     <div className="p-6">
                       {/* Content */}
-                      <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                      <h4 className="text-lg font-bold text-gray-900 mb-3">
                         {benefit.title}
                       </h4>
                       <p className="text-gray-600 leading-relaxed text-sm">
@@ -216,13 +216,13 @@ export default function ProblemSolvingFilters() {
             {/* Products Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {filters.map((filter, index) => (
-                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
+                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
                   {/* Product Image */}
                   <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
                     <img 
                       src={filter.image} 
                       alt={filter.name}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
@@ -234,7 +234,7 @@ export default function ProblemSolvingFilters() {
 
                     <button 
                       onClick={() => handleGetQuote(filter.name)}
-                      className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto"
+                      className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors mt-auto"
                     >
                       Get Quote
                     </button>

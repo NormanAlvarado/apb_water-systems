@@ -162,13 +162,13 @@ export default function WaterConditioning() {
             {/* Products Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {models.map((model, index) => (
-                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
+                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
                   {/* Product Image */}
                   <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
                     <img 
                       src={model.image} 
                       alt={model.name}
-                      className="w-full h-full object-contain transition-transform duration-500 hover:scale-110 p-4"
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
 
@@ -180,7 +180,7 @@ export default function WaterConditioning() {
 
                     <button 
                       onClick={() => handleGetQuote(model.name)}
-                      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 mt-auto"
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors mt-auto"
                     >
                       Get Quote
                     </button>

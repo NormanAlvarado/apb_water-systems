@@ -131,7 +131,7 @@ export default function ConstantPressure() {
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                  <div key={index} className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
                     <h4 className="text-xl font-bold text-gray-800 mb-3">
                       {benefit.title}
                     </h4>
@@ -198,13 +198,13 @@ export default function ConstantPressure() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors"
+                  className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition"
                 >
                   Get Quote
                 </button>
                 <a 
                   href="tel:+50660339416"
-                  className="inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-800 transition-colors"
+                  className="inline-block bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-800 transition"
                 >
                   Call +506 6033-9416
                 </a>
@@ -212,7 +212,7 @@ export default function ConstantPressure() {
                   href="https://wa.me/50660339416?text=Hi%20APB%20Water%20Systems!%20I'm%20interested%20in%20learning%20more%20about%20your%20Constant%20Pressure%20Water%20Systems."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-colors"
+                  className="inline-block bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition"
                 >
                   WhatsApp Us
                 </a>
