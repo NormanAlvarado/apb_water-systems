@@ -30,9 +30,9 @@ export default function FeaturesSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Lifetime Warranty</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Best Quality in the Market</h3>
                 <p className="text-gray-600">
-                  Industry-leading limited lifetime warranty on all RainSoft systems
+                  Industry-leading quality standards on all RainSoft systems
                 </p>
               </div>
 
