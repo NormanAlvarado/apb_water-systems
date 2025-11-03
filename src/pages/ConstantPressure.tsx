@@ -53,7 +53,7 @@ export default function ConstantPressure() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://www.hotpropane.com/assets/uploads/images/water-faucet-sink.webp)' }}
         >
-          <div className="absolute inset-0 bg-blue-900/30"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">

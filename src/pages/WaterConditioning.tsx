@@ -49,7 +49,7 @@ export default function WaterConditioning() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://c02.purpledshub.com/uploads/sites/41/2018/07/GettyImages-503847945-de8171f.jpg)' }}
         >
-          <div className="absolute inset-0 bg-blue-900/30"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">

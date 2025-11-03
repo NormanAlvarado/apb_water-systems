@@ -22,7 +22,7 @@ export default function Hero() {
         }`}
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-cyan-400/10"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Placeholder Background - Shows while image loads */}

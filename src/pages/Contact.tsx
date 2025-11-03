@@ -28,7 +28,7 @@ function Contact() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${waterBg})` }}
         >
-          <div className="absolute inset-0 bg-blue-900/30"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
         <div className="container mx-auto px-4 py-16 relative z-10">
