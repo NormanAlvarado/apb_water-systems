@@ -1,6 +1,6 @@
 export default function FeaturesSection() {
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+    <section id="why-choose-us-section" className="py-16 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Title */}

@@ -20,7 +20,7 @@ export default function KnowYourWater() {
   ]
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="know-your-water-section" className="py-20 relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -66,7 +66,7 @@ export default function KnowYourWater() {
 
                 {/* Content */}
                 <div className="p-6 bg-gradient-to-b from-white to-blue-50">
-                  <h3 className="text-xl font-bold text-cyan-600 mb-4">
+                  <h3 className="text-xl font-bold text-blue-600 mb-4">
                     {insight.title}
                   </h3>
                   <p className="text-gray-700 text-sm leading-relaxed">

@@ -76,7 +76,7 @@ export default function DrinkingWater() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://www.cdc.gov/environmental-health-tracking/media/images/DrinkingWater1200x675.jpg)' }}
         >
-          <div className="absolute inset-0 bg-cyan-900/40"></div>
+          <div className="absolute inset-0 bg-blue-900/40"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -104,7 +104,7 @@ export default function DrinkingWater() {
             {/* Intro with image */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
               <div>
-                <div className="inline-block bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   PREMIUM DRINKING WATER
                 </div>
                 <h2 className="text-4xl font-bold text-gray-800 mb-6">
@@ -128,18 +128,13 @@ export default function DrinkingWater() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-cyan-600 text-white p-6 rounded-xl shadow-xl">
-                  <div className="text-2xl font-bold mb-1">🇺🇸</div>
-                  <div className="text-sm font-semibold">Proudly Designed &</div>
-                  <div className="text-sm font-semibold">Manufactured in USA</div>
-                </div>
               </div>
             </div>
 
             {/* Benefits Grid */}
             <div className="mb-20">
               <div className="text-center mb-16">
-                <div className="inline-block bg-cyan-100 text-cyan-700 px-5 py-2 rounded text-sm font-bold mb-4 uppercase tracking-wide">
+                <div className="inline-block bg-blue-100 text-blue-700 px-5 py-2 rounded text-sm font-bold mb-4 uppercase tracking-wide">
                   Key Benefits
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -157,8 +152,8 @@ export default function DrinkingWater() {
                     key={index}
                     className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-200"
                   >
-                    {/* Cyan top bar */}
-                    <div className="h-2 bg-gradient-to-r from-cyan-600 to-blue-500"></div>
+                    {/* Blue top bar */}
+                    <div className="h-2 bg-gradient-to-r from-blue-600 to-cyan-500"></div>
                     
                     <div className="p-6">
                       {/* Content */}
@@ -174,19 +169,19 @@ export default function DrinkingWater() {
               </div>
 
               {/* Stats Bar */}
-              <div className="mt-16 bg-gradient-to-r from-cyan-900 to-blue-800 rounded-lg p-8 text-white">
+              <div className="mt-16 bg-gradient-to-r from-blue-900 to-cyan-800 rounded-lg p-8 text-white">
                 <div className="grid md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
                   <div>
                     <div className="text-4xl font-bold mb-2">99%</div>
-                    <div className="text-cyan-100 text-sm uppercase tracking-wide">Contaminant Removal</div>
+                    <div className="text-blue-100 text-sm uppercase tracking-wide">Contaminant Removal</div>
                   </div>
                   <div>
                     <div className="text-4xl font-bold mb-2">$500+</div>
-                    <div className="text-cyan-100 text-sm uppercase tracking-wide">Annual Savings vs Bottled</div>
+                    <div className="text-blue-100 text-sm uppercase tracking-wide">Annual Savings vs Bottled</div>
                   </div>
                   <div>
                     <div className="text-4xl font-bold mb-2">24/7</div>
-                    <div className="text-cyan-100 text-sm uppercase tracking-wide">Pure Water On Demand</div>
+                    <div className="text-blue-100 text-sm uppercase tracking-wide">Pure Water On Demand</div>
                   </div>
                 </div>
               </div>
@@ -196,7 +191,7 @@ export default function DrinkingWater() {
       </section>
 
       {/* Systems Section with Grid */}
-      <section className="py-20 bg-gradient-to-br from-cyan-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -223,13 +218,13 @@ export default function DrinkingWater() {
 
                   {/* Product Content */}
                   <div className="p-6 flex flex-col items-center text-center flex-grow">
-                    <h3 className="text-xl font-bold text-cyan-600 mb-4 min-h-[3.5rem] flex items-center">
+                    <h3 className="text-xl font-bold text-blue-600 mb-4 min-h-[3.5rem] flex items-center">
                       {system.name}
                     </h3>
 
                     <button 
                       onClick={() => handleGetQuote(system.name)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors mt-auto"
+                      className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors mt-auto"
                     >
                       Get Quote
                     </button>
@@ -248,32 +243,32 @@ export default function DrinkingWater() {
       />
 
       {/* Quality Assurance Section */}
-      <section className="py-20 bg-gradient-to-br from-cyan-900 via-blue-900 to-cyan-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-900 via-cyan-900 to-blue-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h3 className="text-4xl md:text-5xl font-bold mb-6">
                 Uncompromising Quality & Performance
               </h3>
-              <p className="text-xl text-cyan-100 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
                 Each of these premium products undergoes rigorous third-party testing, comes backed by an unsurpassed Limited Warranty, and is assembled in a modern, ISO 9001-certified Midwest facility.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-6xl font-bold text-white mb-3">🇺🇸</div>
-                <div className="text-cyan-200 text-lg font-semibold">Proudly Made in USA</div>
-                <p className="text-cyan-100 text-sm mt-2">Designed & manufactured domestically</p>
+                <div className="text-blue-200 text-lg font-semibold">Proudly Made in USA</div>
+                <p className="text-blue-100 text-sm mt-2">Designed & manufactured domestically</p>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-6xl font-bold text-white mb-3">ISO</div>
-                <div className="text-cyan-200 text-lg font-semibold">9001 Certified</div>
-                <p className="text-cyan-100 text-sm mt-2">Quality management systems</p>
+                <div className="text-blue-200 text-lg font-semibold">9001 Certified</div>
+                <p className="text-blue-100 text-sm mt-2">Quality management systems</p>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-6xl font-bold text-white mb-3">100%</div>
-                <div className="text-cyan-200 text-lg font-semibold">Quality Guaranteed</div>
-                <p className="text-cyan-100 text-sm mt-2">Unsurpassed limited warranty</p>
+                <div className="text-blue-200 text-lg font-semibold">Quality Guaranteed</div>
+                <p className="text-blue-100 text-sm mt-2">Unsurpassed limited warranty</p>
               </div>
             </div>
           </div>

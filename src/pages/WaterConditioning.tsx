@@ -81,13 +81,13 @@ export default function WaterConditioning() {
                   PREMIUM WATER SOFTENING
                 </div>
                 <h2 className="text-4xl font-bold text-gray-800 mb-6">
-                  Smart Performance You Can Count On
+                  Transform Your Home's Water Quality
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  For decades, the RainSoft name has been synonymous with technologically advanced water softening equipment that homeowners can depend on. Every RainSoft water softener is designed to provide a lifetime of superior performance and worry-free operation.
+                  Water conditioning systems are essential for homes with hard water, which contains high levels of minerals like calcium and magnesium. These minerals cause scale buildup in pipes and appliances, reduce soap effectiveness, and leave residue on fixtures and clothing. A quality water softener removes these minerals, protecting your home's plumbing infrastructure and extending the lifespan of water-using appliances.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  By turning ordinary water into extraordinary water, RainSoft water softeners noticeably improve a wide variety of everyday household activities, such as bathing, doing laundry, and washing dishes.
+                  By transforming hard water into soft water, conditioning systems dramatically improve everyday household activities. You'll notice softer skin and hair after bathing, cleaner and softer laundry, spot-free dishes, and significantly reduced soap and detergent usage. Beyond comfort, these systems represent a smart investment that saves money through lower energy bills, reduced maintenance costs, and longer-lasting appliances.
                 </p>
               </div>
               <div className="relative">
@@ -98,22 +98,15 @@ export default function WaterConditioning() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-xl shadow-xl">
-                  <div className="text-2xl font-bold mb-1">🇺🇸</div>
-                  <div className="text-sm font-semibold">Proudly Designed &</div>
-                  <div className="text-sm font-semibold">Manufactured in USA</div>
-                </div>
               </div>
             </div>
 
             {/* Benefits Grid - Business Professional Design */}
             <div className="mb-20">
               <div className="text-center mb-16">
-                <div className="inline-block bg-blue-100 text-blue-700 px-5 py-2 rounded text-sm font-bold mb-4 uppercase tracking-wide">
-                  Key Benefits
-                </div>
+
                 <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  The Business Case for Soft Water
+                  Key Benefits
                 </h3>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                   Investing in water softening technology delivers measurable returns across multiple areas of your home and lifestyle
