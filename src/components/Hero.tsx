@@ -1,18 +1,34 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import heroBg from '../assets/HeroBG.png'
 import rainsoftLogo from '../assets/RainSoft-Logo-white.png'
 import apbLogo from '../assets/APBWSWhite.jpeg'
 
 export default function Hero() {
+  const [imageLoaded, setImageLoaded] = useState(false)
+
+  useEffect(() => {
+    const img = new Image()
+    img.src = heroBg
+    img.onload = () => setImageLoaded(true)
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center pt-20">
-      {/* Background Image */}
+      {/* Background Image with Loading State */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ${
+          imageLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-cyan-400/10"></div>
       </div>
+
+      {/* Placeholder Background - Shows while image loads */}
+      {!imageLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-500 to-blue-700 animate-pulse" />
+      )}
 
       {/* Authorized Distributor Badge */}
       <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-20">
