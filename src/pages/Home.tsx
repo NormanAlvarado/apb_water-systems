@@ -13,8 +13,9 @@ function Home() {
       <Header />
       <Hero />
       <UseCasesGrid />
-      <KnowYourWater />
       <FeaturesSection />
+      <KnowYourWater />
+      
       <Footer />
     </div>
   )

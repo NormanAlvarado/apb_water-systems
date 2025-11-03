@@ -1,5 +1,3 @@
-import knowBg from '../assets/knowBG.png'
-
 export default function KnowYourWater() {
   const waterInsights = [
     {
@@ -20,31 +18,23 @@ export default function KnowYourWater() {
   ]
 
   return (
-    <section id="know-your-water-section" className="py-20 relative overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${knowBg})` }}
-      >
-        <div className="absolute inset-0 bg-blue-900/30"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="know-your-water-section" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-4">
-          <p className="text-white text-base font-semibold tracking-widest uppercase mb-2 drop-shadow-lg">
+          <p className="text-blue-600 text-base font-semibold tracking-widest uppercase mb-2">
             Water Insights
           </p>
         </div>
 
         {/* Title with Icon */}
         <div className="flex items-center justify-center mb-12">
-          <svg className="w-16 h-16 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="w-16 h-16 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
           </svg>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
           Know Your Water
         </h2>
 
@@ -79,7 +69,7 @@ export default function KnowYourWater() {
 
         {/* CTA Button */}
         <div className="text-center mt-12">
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all hover:shadow-2xl transform hover:-translate-y-1">
+          <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-xl transform hover:-translate-y-1">
             Contact Us Today
           </button>
         </div>

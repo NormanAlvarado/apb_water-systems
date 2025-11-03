@@ -23,7 +23,7 @@ export default function UseCasesGrid() {
     },
     {
       title: "Constant Pressure Water Systems",
-      image: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&h=300&fit=crop",
+      image: "https://www.hotpropane.com/assets/uploads/images/water-faucet-sink.webp",
       description: "Maintain consistent water pressure throughout your home with intelligent pump technology. Perfect for homes with varying water demand.",
       link: "/products/constant-pressure"
     }
