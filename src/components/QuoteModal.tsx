@@ -15,14 +15,15 @@ export default function QuoteModal({ isOpen, onClose, productName }: QuoteModalP
     onClose()
   }
 
-  const handleEmail = () => {
+    const handleEmail = () => {
     const subject = productName 
-      ? `Quote Request: ${productName}`
-      : 'Information Request'
+      ? `Quote Request for ${productName}`
+      : 'Water Treatment Quote Request'
     const body = productName
-      ? `Hello APB Water Systems,%0D%0A%0D%0AI'm interested in getting a quote for: ${productName}%0D%0A%0D%0APlease contact me with more information.%0D%0A%0D%0AThank you!`
-      : `Hello APB Water Systems,%0D%0A%0D%0AI'm interested in learning more about your water solutions.%0D%0A%0D%0APlease contact me with more information.%0D%0A%0D%0AThank you!`
-    window.location.href = `mailto:info@apbwatersystems.com?subject=${subject}&body=${body}`
+      ? `Hello, I would like to request a quote for ${productName}. Please contact me with more information.`
+      : 'Hello, I would like to request a quote for your water treatment solutions. Please contact me with more information.'
+    
+    window.location.href = `mailto:cartapate@gmail.com?subject=${subject}&body=${body}`
     onClose()
   }
 
