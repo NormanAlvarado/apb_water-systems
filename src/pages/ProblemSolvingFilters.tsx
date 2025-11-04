@@ -79,7 +79,7 @@ export default function ProblemSolvingFilters() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://olympianwatertesting.com/wp-content/uploads/2024/01/clean-tap-water.png)' }}
         >
-          <div className="absolute inset-0 bg-blue-900/40"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">

@@ -1,11 +1,9 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import apbLogo from '../assets/APBWSWhite.jpeg'
-import QuoteModal from './QuoteModal'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isModalOpen, setIsModalOpen] = useState(false)
   const location = useLocation()
 
   return (
@@ -162,12 +160,12 @@ export default function Header() {
               </svg>
               +506 6033-9416
             </a>
-            <button 
-              onClick={() => setIsModalOpen(true)}
+            <Link 
+              to="/contact"
               className="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-all hover:shadow-lg"
             >
-              Get Quote
-            </button>
+              Contact
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -227,24 +225,17 @@ export default function Header() {
                 📞 +506 6033-9416
               </a>
               
-              <button 
-                onClick={() => {
-                  setIsModalOpen(true)
-                  setIsMobileMenuOpen(false)
-                }}
-                className="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-700 w-full text-center"
+              <Link 
+                to="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-700 w-full text-center block"
               >
-                Get Quote
-              </button>
+                Contact
+              </Link>
             </nav>
           </div>
         )}
       </div>
-
-      <QuoteModal 
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
 
       <style>{`
         @keyframes slideDown {

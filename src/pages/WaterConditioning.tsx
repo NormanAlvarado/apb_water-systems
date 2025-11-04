@@ -49,7 +49,7 @@ export default function WaterConditioning() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://c02.purpledshub.com/uploads/sites/41/2018/07/GettyImages-503847945-de8171f.jpg)' }}
         >
-          <div className="absolute inset-0 bg-blue-900/30"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -194,38 +194,32 @@ export default function WaterConditioning() {
       />
 
       {/* Quality Assurance Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-cyan-800 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+      <section className="py-20 bg-gradient-to-br from-blue-900 via-cyan-900 to-blue-800 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold text-white mb-6">
-                Unmatched Quality & Warranty
+              <h3 className="text-4xl md:text-5xl font-bold mb-6">
+                Uncompromising Quality & Performance
               </h3>
-              <p className="text-xl text-cyan-100 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
                 Each of these premium products undergoes rigorous third-party testing, comes backed by an unsurpassed Limited Warranty, and is assembled in a modern, ISO 9001-certified Midwest facility.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-6xl font-bold text-white mb-3">🇺🇸</div>
-                <div className="text-cyan-200 text-lg font-semibold">Proudly Made in USA</div>
-                <p className="text-cyan-100 text-sm mt-2">Designed & manufactured</p>
+                <div className="text-blue-200 text-lg font-semibold">Proudly Made in USA</div>
+                <p className="text-blue-100 text-sm mt-2">Designed & manufactured domestically</p>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-6xl font-bold text-white mb-3">ISO</div>
-                <div className="text-cyan-200 text-lg font-semibold">9001 Certified</div>
-                <p className="text-cyan-100 text-sm mt-2">Quality management systems</p>
+                <div className="text-blue-200 text-lg font-semibold">9001 Certified</div>
+                <p className="text-blue-100 text-sm mt-2">Quality management systems</p>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-6xl font-bold text-white mb-3">100%</div>
-                <div className="text-cyan-200 text-lg font-semibold">Quality Guaranteed</div>
-                <p className="text-cyan-100 text-sm mt-2">Unsurpassed limited warranty</p>
+                <div className="text-blue-200 text-lg font-semibold">Quality Guaranteed</div>
+                <p className="text-blue-100 text-sm mt-2">Unsurpassed limited warranty</p>
               </div>
             </div>
           </div>
