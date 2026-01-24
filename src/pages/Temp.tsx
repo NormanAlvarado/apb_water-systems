@@ -76,8 +76,8 @@ function Temp() {
                   </div>
                   <div className="flex-1">
                     <p className="text-xs text-gray-500 font-light">Email</p>
-                    <a href="mailto:info@apbwatersystems.com" className="text-sm sm:text-base text-gray-800 hover:text-blue-600 transition font-normal break-all">
-                      info@apbwatersystems.com
+                    <a href="mailto:cartapate@gmail.com" className="text-sm sm:text-base text-gray-800 hover:text-blue-600 transition font-normal break-all">
+                      cartapate@gmail.com
                     </a>
                   </div>
                 </div>

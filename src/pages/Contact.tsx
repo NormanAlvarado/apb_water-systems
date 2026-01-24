@@ -10,7 +10,7 @@ function Contact() {
   }
 
   const handleEmail = () => {
-    window.location.href = 'mailto:info@apbwatersystems.com'
+    window.location.href = 'mailto:cartapate@gmail.com'
   }
 
   const handleCall = () => {

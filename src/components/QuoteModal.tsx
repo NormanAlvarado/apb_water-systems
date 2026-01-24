@@ -22,7 +22,7 @@ export default function QuoteModal({ isOpen, onClose, productName }: QuoteModalP
     const body = productName
       ? `Hello APB Water Systems,%0D%0A%0D%0AI'm interested in getting a quote for: ${productName}%0D%0A%0D%0APlease contact me with more information.%0D%0A%0D%0AThank you!`
       : `Hello APB Water Systems,%0D%0A%0D%0AI'm interested in learning more about your water solutions.%0D%0A%0D%0APlease contact me with more information.%0D%0A%0D%0AThank you!`
-    window.location.href = `mailto:info@apbwatersystems.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:cartapate@gmail.com?subject=${subject}&body=${body}`
     onClose()
   }
 
