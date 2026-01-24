@@ -7,10 +7,12 @@ import DrinkingWater from './pages/DrinkingWater'
 import ProblemSolvingFilters from './pages/ProblemSolvingFilters'
 import ConstantPressure from './pages/ConstantPressure'
 import WhatsAppButton from './components/WhatsAppButton'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

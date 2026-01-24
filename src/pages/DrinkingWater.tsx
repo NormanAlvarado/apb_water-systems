@@ -2,36 +2,56 @@ import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
+import ProductFeaturesModal from '../components/ProductFeaturesModal'
 import PageLoader from '../components/PageLoader'
 
 export default function DrinkingWater() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isFeaturesModalOpen, setIsFeaturesModalOpen] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState('')
+  const [selectedProductFeatures, setSelectedProductFeatures] = useState<any>(null)
 
   const handleGetQuote = (productName: string) => {
     setSelectedProduct(productName)
     setIsModalOpen(true)
   }
 
+  const handleViewFeatures = (product: any) => {
+    setSelectedProductFeatures(product)
+    setIsFeaturesModalOpen(true)
+  }
+
   const systems = [
     {
-      name: "Ultrefiner II Premium Drinking Water System",
-      description: "Under-sink reverse osmosis system delivering better-than-bottle quality water for your home",
-      features: ["Reverse osmosis technology", "Under-sink installation", "Premium filtration", "Better than bottled water quality"],
-      image: "https://www.rainsoft.com/wp-content/uploads/2013/07/ultrefinerII.png.webp",
-      brand: "RainSoft"
-    },
-    {
-      name: "Hydrefiner II Drinking Water System",
-      description: "Compressed carbon filter for under-sink installation with continuous performance",
-      features: ["Compressed carbon block", "Under-sink design", "Continuous performance", "Easy maintenance"],
-      image: "https://i.ytimg.com/vi/okDwlq_YsxI/maxresdefault.jpg",
-      brand: "Lifetime Solutions"
-    },
-    {
       name: "Ultrefiner Elite",
+      shortName: "Ultrefiner Elite",
       description: "Premium variant of the Ultrefiner with enhanced features and superior performance",
-      features: ["Premium filtration", "Enhanced capacity", "Superior performance", "Advanced technology"],
+      features: [
+        "Premium reverse osmosis filtration",
+        "Enhanced capacity for larger households",
+        "Superior performance and efficiency",
+        "Advanced technology for better-than-bottled water quality"
+      ],
+      benefits: [
+        "Better-than-bottled water quality",
+        "Great tasting water for drinking and cooking",
+        "Removes up to 99% of contaminants",
+        "Under-sink installation saves space"
+      ],
+      applications: [
+        "Under-sink installation",
+        "Kitchen use",
+        "Drinking and cooking water",
+        "Suitable for all household sizes"
+      ],
+      reduces: [
+        "Heavy metals",
+        "Chlorine",
+        "Lead",
+        "Arsenic",
+        "Fluoride",
+        "TDS (Total Dissolved Solids)"
+      ],
       image: "https://www.rainsoft.com/wp-content/uploads/2025/05/ultrefiner-elite-768x432.jpg.webp",
       brand: "RainSoft"
     }
@@ -70,7 +90,7 @@ export default function DrinkingWater() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-24 pb-12 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -81,18 +101,63 @@ export default function DrinkingWater() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <svg className="w-20 h-20 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
+            <div className="flex justify-center mb-4">
+              <svg className="w-16 h-16 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
               </svg>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Premium Drinking Water Systems
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Our Premium Drinking Water System
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-100 mb-8 leading-relaxed">
-              Transform your kitchen tap into a fountain of delicious, pure drinking water
+            <p className="text-lg md:text-xl text-cyan-100 leading-relaxed">
+              Experience the ultimate in water purification with our elite reverse osmosis system
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Systems Section with Grid */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
+              {systems.map((system, index) => (
+                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
+                  {/* Product Image */}
+                  <div className="aspect-video overflow-hidden bg-gray-100 flex-shrink-0">
+                    <img 
+                      src={system.image} 
+                      alt={system.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Product Content */}
+                  <div className="p-6 flex flex-col items-center text-center flex-grow">
+                    <h3 className="text-xl font-bold text-blue-600 mb-4 min-h-[3.5rem] flex items-center">
+                      {system.name}
+                    </h3>
+
+                    <div className="space-y-3 mt-auto w-full max-w-xs">
+                      <button 
+                        onClick={() => handleViewFeatures(system)}
+                        className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-colors"
+                      >
+                        View Features
+                      </button>
+                      <button 
+                        onClick={() => handleGetQuote(system.name)}
+                        className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+                      >
+                        Get Quote
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -190,52 +255,6 @@ export default function DrinkingWater() {
         </div>
       </section>
 
-      {/* Systems Section with Grid */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h3 className="text-4xl font-bold text-gray-800 mb-4">
-                Our Drinking Water Systems
-              </h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Choose the perfect system for your family's needs and enjoy premium drinking water every day
-              </p>
-            </div>
-            
-            {/* Products Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {systems.map((system, index) => (
-                <div key={index} className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full ${index === 2 ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''}`}>
-                  {/* Product Image */}
-                  <div className="aspect-video overflow-hidden bg-gray-100 flex-shrink-0">
-                    <img 
-                      src={system.image} 
-                      alt={system.name}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-
-                  {/* Product Content */}
-                  <div className="p-6 flex flex-col items-center text-center flex-grow">
-                    <h3 className="text-xl font-bold text-blue-600 mb-4 min-h-[3.5rem] flex items-center">
-                      {system.name}
-                    </h3>
-
-                    <button 
-                      onClick={() => handleGetQuote(system.name)}
-                      className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors mt-auto"
-                    >
-                      Get Quote
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <QuoteModal 
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -274,6 +293,23 @@ export default function DrinkingWater() {
           </div>
         </div>
       </section>
+
+      {/* Modals */}
+      {isFeaturesModalOpen && selectedProductFeatures && (
+        <ProductFeaturesModal
+          isOpen={isFeaturesModalOpen}
+          product={selectedProductFeatures}
+          onClose={() => setIsFeaturesModalOpen(false)}
+        />
+      )}
+
+      {isModalOpen && (
+        <QuoteModal 
+          isOpen={isModalOpen} 
+          onClose={() => setIsModalOpen(false)} 
+          productName={selectedProduct}
+        />
+      )}
 
       <Footer />
     </div>

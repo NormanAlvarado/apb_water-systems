@@ -3,47 +3,71 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
 import PageLoader from '../components/PageLoader'
+import ProductFeaturesModal from '../components/ProductFeaturesModal'
 
 export default function ProblemSolvingFilters() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState('')
+  const [isFeaturesModalOpen, setIsFeaturesModalOpen] = useState(false)
+  const [selectedProductFeatures, setSelectedProductFeatures] = useState<any>(null)
 
   const handleGetQuote = (productName: string) => {
     setSelectedProduct(productName)
     setIsModalOpen(true)
   }
 
+  const handleViewFeatures = (product: any) => {
+    setSelectedProductFeatures(product)
+    setIsFeaturesModalOpen(true)
+  }
+
   const filters = [
     {
-      name: "EC4 OxyTech Whole-House Water Filtration System",
-      icon: "🏠",
-      description: "Automatic, chemical-free system for iron, sulfur, and manganese removal",
-      benefits: ["Chemical-free operation", "Removes iron, sulfur & manganese", "Automatic system", "Whole-house protection"],
-      image: "https://img1.wsimg.com/isteam/ip/ce7ef272-052c-4533-bcf4-0c2c2e420d98/1000005836.jpg/:/cr=t:22.35%25,l:18.89%25,w:62.22%25,h:55.3%25/rs=w:776,h:1035,cg:true,m",
-      brand: "RainSoft"
-    },
-    {
-      name: "EC5 OxyTech Whole-House Water Filtration System",
-      icon: "💡",
-      description: "Latest version for iron, sulfur, and manganese with integrated system design",
-      benefits: ["Newest technology", "Integrated design", "Superior performance", "Easy operation"],
-      image: "https://images.thdstatic.com/productImages/0a966ba0-79bb-4d66-abe0-eafff16c48bf/svn/rainsoft-water-softener-systems-hdinstiec5ws-64_600.jpg",
-      brand: "RainSoft of NE Iowa"
-    },
-    {
       name: "RCUV™ Ultraviolet Water Disinfection System",
+      shortName: "RCUV™ UV Disinfection",
       icon: "⚡",
       description: "UV disinfection solution for problematic water sources",
-      benefits: ["UV disinfection", "Chemical-free", "Kills bacteria & viruses", "Safe water solution"],
+      features: [
+        "Advanced UV disinfection technology",
+        "Chemical-free water treatment",
+        "Effective against bacteria and viruses",
+        "Continuous flow disinfection",
+        "Low maintenance operation",
+        "Energy efficient design",
+        "Compact footprint",
+        "Easy lamp replacement"
+      ],
+      benefits: [
+        "UV disinfection", 
+        "Chemical-free", 
+        "Kills bacteria & viruses", 
+        "Safe water solution",
+        "No taste or odor changes",
+        "Environmentally friendly",
+        "Cost-effective operation",
+        "Reliable protection"
+      ],
+      applications: [
+        "Well water treatment",
+        "Private water systems",
+        "Cottage and cabin water",
+        "Point-of-entry disinfection",
+        "Problem water sources",
+        "Rural water systems",
+        "Lake and surface water",
+        "Backup disinfection"
+      ],
+      reduces: [
+        "Bacteria and pathogens",
+        "E. coli",
+        "Coliform bacteria",
+        "Viruses",
+        "Cryptosporidium",
+        "Giardia",
+        "Waterborne microorganisms",
+        "Biological contaminants"
+      ],
       image: "https://rainsoftofnorthernmichigan.com/wp-content/uploads/2024/10/RCUV-Water-Disinfection-System-Michigan.png",
-      brand: "RainSoft"
-    },
-    {
-      name: "Whole-House Carbon Filtration System",
-      icon: "🔧",
-      description: "Carbon filter for entire home to remove odors, tastes, and chlorine",
-      benefits: ["Removes chlorine", "Eliminates odors", "Improves taste", "Whole-house coverage"],
-      image: "https://rainsoftofnorthernmichigan.com/wp-content/uploads/2024/08/RainSoft-Product-Line.jpg",
       brand: "RainSoft"
     }
   ]
@@ -73,7 +97,7 @@ export default function ProblemSolvingFilters() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-24 pb-12 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -84,18 +108,63 @@ export default function ProblemSolvingFilters() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <svg className="w-20 h-20 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
+            <div className="flex justify-center mb-4">
+              <svg className="w-16 h-16 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
               </svg>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Problem-Solving Water Filters
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-100 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-cyan-100 leading-relaxed">
               Advanced filtration systems engineered to solve your specific water quality challenges
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Filters Section with Grid */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
+              {filters.map((filter, index) => (
+                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
+                  {/* Product Image */}
+                  <div className="aspect-video overflow-hidden bg-white flex-shrink-0 p-6 flex items-center justify-center">
+                    <img 
+                      src={filter.image} 
+                      alt={filter.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Product Content */}
+                  <div className="p-6 flex flex-col items-center text-center flex-grow">
+                    <h3 className="text-xl font-bold text-blue-600 mb-4 min-h-[3.5rem] flex items-center">
+                      {filter.name}
+                    </h3>
+
+                    <div className="space-y-3 mt-auto w-full max-w-xs">
+                      <button 
+                        onClick={() => handleViewFeatures(filter)}
+                        className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-colors"
+                      >
+                        View Features
+                      </button>
+                      <button 
+                        onClick={() => handleGetQuote(filter.name)}
+                        className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+                      >
+                        Get Quote
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -197,52 +266,6 @@ export default function ProblemSolvingFilters() {
         </div>
       </section>
 
-      {/* Filters Section with Grid */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h3 className="text-4xl font-bold text-gray-800 mb-4">
-                Our Advanced Filtration Systems
-              </h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Technologically advanced whole-house filters designed to solve your specific water quality issues
-              </p>
-            </div>
-            
-            {/* Products Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {filters.map((filter, index) => (
-                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
-                  {/* Product Image */}
-                  <div className="aspect-square overflow-hidden bg-white flex-shrink-0 p-6 flex items-center justify-center">
-                    <img 
-                      src={filter.image} 
-                      alt={filter.name}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-
-                  {/* Product Content */}
-                  <div className="p-6 flex flex-col items-center text-center flex-grow">
-                    <h3 className="text-xl font-bold text-blue-600 mb-4 min-h-[3.5rem] flex items-center">
-                      {filter.name}
-                    </h3>
-
-                    <button 
-                      onClick={() => handleGetQuote(filter.name)}
-                      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors mt-auto"
-                    >
-                      Get Quote
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <QuoteModal 
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -281,6 +304,23 @@ export default function ProblemSolvingFilters() {
           </div>
         </div>
       </section>
+
+      {/* Modals */}
+      {isFeaturesModalOpen && selectedProductFeatures && (
+        <ProductFeaturesModal
+          isOpen={isFeaturesModalOpen}
+          product={selectedProductFeatures}
+          onClose={() => setIsFeaturesModalOpen(false)}
+        />
+      )}
+
+      {isModalOpen && (
+        <QuoteModal 
+          isOpen={isModalOpen} 
+          onClose={() => setIsModalOpen(false)} 
+          productName={selectedProduct}
+        />
+      )}
 
       <Footer />
     </div>

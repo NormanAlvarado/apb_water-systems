@@ -15,8 +15,11 @@ export default function Footer() {
               {/* Company Description */}
               <div className="text-center md:text-left">
                 <h3 className="text-gray-800 font-bold text-2xl mb-4">About Us</h3>
+                <p className="text-base text-gray-700 max-w-md mb-3">
+                  Premium water conditioning solutions for Costa Rica. As an authorized distributor of RainSoft products, we bring you world-class water treatment systems backed by decades of innovation and quality.
+                </p>
                 <p className="text-base text-gray-700 max-w-md">
-                  Premium water conditioning solutions for Costa Rica. Improving water quality and your quality of life.
+                  Improving water quality and your quality of life with trusted, certified solutions.
                 </p>
               </div>
 
@@ -35,13 +38,25 @@ export default function Footer() {
                   </a>
                   
                   <a 
-                    href="mailto:cartapate@gmail.com" 
+                    href="mailto:info@apbwatersystems.com" 
                     className="flex items-center justify-center md:justify-start gap-3 text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium"
                   >
                     <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    cartapate@gmail.com
+                    info@apbwatersystems.com
+                  </a>
+
+                  <a 
+                    href="https://www.facebook.com/share/1C3YDrXdTz/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center md:justify-start gap-3 text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  >
+                    <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    Facebook
                   </a>
                 </div>
               </div>
@@ -74,9 +89,24 @@ export default function Footer() {
                 alt="APB Water Systems" 
                 className="h-32 w-32 rounded-full object-cover shadow-2xl mb-4"
               />
-              <h2 className="text-white font-bold text-3xl md:text-4xl text-center">
+              <h2 className="text-white font-bold text-3xl md:text-4xl text-center mb-4">
                 APB Water Systems
               </h2>
+              
+              {/* Social Media Links */}
+              <div className="flex gap-4 mt-2">
+                <a 
+                  href="https://www.facebook.com/share/1C3YDrXdTz/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-blue-400 transition-colors duration-300"
+                  aria-label="Visit our Facebook page"
+                >
+                  <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+              </div>
             </div>
 
             {/* Bottom Bar */}

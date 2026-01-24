@@ -7,21 +7,6 @@ import PageLoader from '../components/PageLoader'
 export default function ConstantPressure() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const product = {
-    name: "HydroStart Pressure Relief Valve/System",
-    description: "Advanced pressure management system that maintains constant water pressure throughout your home",
-    features: [
-      "Maintains constant pressure",
-      "Protects plumbing system",
-      "Reduces water hammer",
-      "Extends appliance life",
-      "Quiet operation",
-      "Easy installation"
-    ],
-    image: "https://www.rainsoft.com/wp-content/uploads/2024/08/hydrostart-web-graphic.jpg.webp",
-    brand: "RainSoft"
-  }
-
   const benefits = [
     {
       title: "Consistent Pressure",
@@ -47,7 +32,7 @@ export default function ConstantPressure() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-24 pb-12 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -58,16 +43,16 @@ export default function ConstantPressure() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <svg className="w-20 h-20 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
+            <div className="flex justify-center mb-4">
+              <svg className="w-16 h-16 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
               </svg>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Constant Pressure Water Systems
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-100 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-cyan-100 leading-relaxed">
               Maintain consistent water pressure throughout your home for optimal comfort and system protection
             </p>
           </div>
@@ -144,51 +129,6 @@ export default function ConstantPressure() {
                 ))}
               </div>
             </div>
-
-            {/* Product Showcase */}
-            <div className="mb-20">
-              <h3 className="text-3xl font-bold text-gray-800 text-center mb-12">
-                Our Constant Pressure Solution
-              </h3>
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-white p-6 flex items-center justify-center">
-                    <img 
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="p-8 flex flex-col justify-center">
-                    <div className="text-sm font-semibold text-cyan-600 mb-2">{product.brand}</div>
-                    <h4 className="text-2xl font-bold text-gray-800 mb-4">
-                      {product.name}
-                    </h4>
-                    <p className="text-gray-700 mb-6 leading-relaxed">
-                      {product.description}
-                    </p>
-                    <div className="space-y-3">
-                      {product.features.map((feature, index) => (
-                        <div key={index} className="flex items-start">
-                          <svg className="w-6 h-6 text-cyan-500 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
-                          <span className="text-gray-700">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <button
-                      onClick={() => setIsModalOpen(true)}
-                      className="mt-6 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition"
-                    >
-                      Get Quote
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-           
           </div>
         </div>
       </section>
@@ -196,7 +136,7 @@ export default function ConstantPressure() {
       <QuoteModal 
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        productName="HydroStart Pressure Relief Valve/System"
+        productName="Constant Pressure System"
       />
 
       <Footer />

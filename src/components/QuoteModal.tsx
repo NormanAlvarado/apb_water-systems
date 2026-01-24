@@ -22,7 +22,12 @@ export default function QuoteModal({ isOpen, onClose, productName }: QuoteModalP
     const body = productName
       ? `Hello APB Water Systems,%0D%0A%0D%0AI'm interested in getting a quote for: ${productName}%0D%0A%0D%0APlease contact me with more information.%0D%0A%0D%0AThank you!`
       : `Hello APB Water Systems,%0D%0A%0D%0AI'm interested in learning more about your water solutions.%0D%0A%0D%0APlease contact me with more information.%0D%0A%0D%0AThank you!`
-    window.location.href = `mailto:cartapate@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@apbwatersystems.com?subject=${subject}&body=${body}`
+    onClose()
+  }
+
+  const handleFacebook = () => {
+    window.open('https://www.facebook.com/share/1C3YDrXdTz/', '_blank')
     onClose()
   }
 
@@ -73,6 +78,17 @@ export default function QuoteModal({ isOpen, onClose, productName }: QuoteModalP
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             <span className="font-medium">Email</span>
+          </button>
+
+          {/* Facebook Option */}
+          <button
+            onClick={handleFacebook}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-3 px-4 flex items-center justify-center gap-2 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span className="font-medium">Facebook</span>
           </button>
 
           {/* Phone Option */}

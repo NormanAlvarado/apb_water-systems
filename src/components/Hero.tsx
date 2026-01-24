@@ -70,12 +70,6 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link 
-                  to="/contact"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
-                >
-                  Contact Us Today
-                </Link>
                 <button 
                   onClick={() => {
                     const productsSection = document.getElementById('products-section')
@@ -83,10 +77,16 @@ export default function Hero() {
                       productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
                     }
                   }}
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition-all hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
                 >
                   View Products
                 </button>
+                <Link 
+                  to="/contact"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition-all hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105"
+                >
+                  Contact Us Today
+                </Link>
               </div>
           </div>
         </div>

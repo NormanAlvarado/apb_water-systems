@@ -2,38 +2,85 @@ import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
+import ProductFeaturesModal from '../components/ProductFeaturesModal'
 import PageLoader from '../components/PageLoader'
 
 export default function WaterConditioning() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isFeaturesModalOpen, setIsFeaturesModalOpen] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState('')
+  const [selectedProductFeatures, setSelectedProductFeatures] = useState<any>(null)
 
   const handleGetQuote = (productName: string) => {
     setSelectedProduct(productName)
     setIsModalOpen(true)
   }
 
+  const handleViewFeatures = (product: any) => {
+    setSelectedProductFeatures(product)
+    setIsFeaturesModalOpen(true)
+  }
+
   const models = [
     {
-      name: "EC5 Water Conditioning System",
-      description: "Our newest and most premium water softener with computerized control and high efficiency",
-      features: ["Computerized smart controls", "Premium performance", "Space-saving design", "Industry-leading efficiency"],
-      image: "https://images.thdstatic.com/productImages/0a966ba0-79bb-4d66-abe0-eafff16c48bf/svn/rainsoft-water-softener-systems-hdinstiec5ws-64_600.jpg",
-      brand: "RainSoft"
+      name: "WaterTrust Pro Series - Whole House Water Softening System",
+      shortName: "Water Softening System",
+      description: "Get softer water throughout the home to protect clothing, skin, dishes, laundry, and water-using appliances",
+      features: [
+        "Get softer water throughout the home to protect clothing, skin, dishes, laundry, and water-using appliances",
+        "Newly redesigned and industry-proven technology delivers high performance and simple operation",
+        "Trade professional ready - installation is straightforward and efficient with easily accessible parts",
+        "Reduced water and salt consumption, which means less salt refills"
+      ],
+      benefits: [
+        "Softer skin and hair",
+        "Cleaner dishes and laundry",
+        "Extended appliance lifespan",
+        "Reduced soap and detergent usage"
+      ],
+      applications: [
+        "Household Size: 35974: 1-4 occupants",
+        "Household Size: 35975: 4-6 occupants",
+        "Household Size: 35976: 6-8 occupants",
+        "Water Source: City or Well"
+      ],
+      reduces: [
+        "Hardness",
+        "Scale buildup",
+        "Soap scum"
+      ],
+      image: "https://s3.amazonaws.com/fam.s3.2/damprod/PDP_Retina/10160/pentair_watertrust_3627297_main.png",
+      brand: "Pentair WaterTrust Pro Series"
     },
     {
-      name: "EC4 Water Conditioning System",
-      description: "Previous premium model with proven technology and reliable performance",
-      features: ["Dependable operation", "Proven technology", "Advanced controls", "Durable construction"],
-      image: "https://images.thdstatic.com/productImages/7e580f9a-d5e7-4bc7-a8c9-31a5fe149632/svn/rainsoft-water-softener-systems-hdinstiec4ws-64_600.jpg",
-      brand: "RainSoft"
-    },
-    {
-      name: "TC-M Series Water Conditioning System",
-      description: "Meter-controlled system as a more standard option for consistent soft water",
-      features: ["Meter-controlled", "Standard reliability", "Cost-effective", "Simple operation"],
-      image: "https://images.thdstatic.com/productImages/0201647d-ef4d-4e2d-8a79-20722d382a99/svn/rainsoft-water-softener-systems-hdinstitws-64_600.jpg",
-      brand: "RainSoft"
+      name: "WaterTrust Pro Series - Whole House Carbon Filtration System",
+      shortName: "Carbon Filtration System",
+      description: "Carbon filtration provides cleaner, fresher water throughout the whole home",
+      features: [
+        "Carbon filtration provides cleaner, fresher water throughout the whole home",
+        "Newly redesigned and industry-proven technology delivers high performance and simple operation",
+        "Trade professional ready - installation is straightforward and efficient with easily accessible parts",
+        "With quick start-up settings and automatic calculations, simply set up and go"
+      ],
+      benefits: [
+        "Removes chlorine taste and odor",
+        "Cleaner, fresher water",
+        "Protects plumbing and appliances",
+        "Simple installation and operation"
+      ],
+      applications: [
+        "Household Size: 35977: 1-4 occupants",
+        "Household Size: 35978: 4-6 occupants",
+        "Household Size: 35979: 6-8 occupants",
+        "Water Source: City or Well"
+      ],
+      reduces: [
+        "Chlorine",
+        "Taste & Odor",
+        "Sediment"
+      ],
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEKSGKBBvsr5trBAtsoNRLm-fb6PjOLlAgOg&s",
+      brand: "Pentair WaterTrust Pro Series"
     }
   ]
 
@@ -43,7 +90,7 @@ export default function WaterConditioning() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-24 pb-12 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -54,21 +101,89 @@ export default function WaterConditioning() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <svg className="w-20 h-20 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
+            <div className="flex justify-center mb-4">
+              <svg className="w-16 h-16 text-cyan-300" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
               </svg>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Premium Water Conditioning Systems
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-100 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-cyan-100 leading-relaxed">
               Transform ordinary water into extraordinary water with RainSoft's technologically advanced water softeners
             </p>
           </div>
         </div>
       </section>
+
+      {/* Models Section with Grid */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h3 className="text-4xl font-bold text-gray-800 mb-4">
+                Pentair WaterTrust Pro Series
+              </h3>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Industry-proven technology with simple installation and high performance
+              </p>
+            </div>
+            
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {models.map((model, index) => (
+                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
+                  {/* Product Image */}
+                  <div className="aspect-square overflow-hidden bg-white flex-shrink-0 p-8 flex items-center justify-center">
+                    <img 
+                      src={model.image} 
+                      alt={model.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Product Content */}
+                  <div className="p-6 flex flex-col items-center text-center flex-grow">
+                    <h3 className="text-xl font-bold text-blue-600 mb-4 min-h-[3.5rem] flex items-center">
+                      {model.shortName}
+                    </h3>
+
+                    <div className="space-y-3 w-full mt-auto">
+                      <button 
+                        onClick={() => handleViewFeatures(model)}
+                        className="w-full bg-white border-2 border-blue-600 text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors"
+                      >
+                        View Features
+                      </button>
+                      <button 
+                        onClick={() => handleGetQuote(model.name)}
+                        className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+                      >
+                        Get Quote
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <QuoteModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        productName={selectedProduct}
+      />
+
+      {selectedProductFeatures && (
+        <ProductFeaturesModal 
+          isOpen={isFeaturesModalOpen}
+          onClose={() => setIsFeaturesModalOpen(false)}
+          product={selectedProductFeatures}
+        />
+      )}
 
       {/* Main Content Section */}
       <section className="py-20 bg-white">
@@ -136,52 +251,6 @@ export default function WaterConditioning() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Models Section with Grid */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h3 className="text-4xl font-bold text-gray-800 mb-4">
-                Our Water Conditioning Systems
-              </h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Your local authorized APB Water Systems dealer will determine which system best fits the needs of your family
-              </p>
-            </div>
-            
-            {/* Products Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {models.map((model, index) => (
-                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
-                  {/* Product Image */}
-                  <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
-                    <img 
-                      src={model.image} 
-                      alt={model.name}
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-
-                  {/* Product Content */}
-                  <div className="p-6 flex flex-col items-center text-center flex-grow">
-                    <h3 className="text-xl font-bold text-blue-600 mb-4 min-h-[3.5rem] flex items-center">
-                      {model.name}
-                    </h3>
-
-                    <button 
-                      onClick={() => handleGetQuote(model.name)}
-                      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors mt-auto"
-                    >
-                      Get Quote
-                    </button>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
