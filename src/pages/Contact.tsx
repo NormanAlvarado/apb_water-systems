@@ -1,9 +1,22 @@
+import { useTranslation } from 'react-i18next'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import PageLoader from '../components/PageLoader'
 import waterBg from '../assets/water.png'
+import { useMetaTags } from '../hooks/useMetaTags'
 
 function Contact() {
+  const { t } = useTranslation()
+
+  useMetaTags({
+    title: t('seo.contact.title'),
+    description: t('seo.contact.description'),
+    keywords: 'contact APB Water Systems, water treatment support, Costa Rica',
+    ogTitle: t('seo.contact.title'),
+    ogDescription: t('seo.contact.description'),
+    canonicalUrl: 'https://apbwatersystems.com/contact'
+  })
+
   const handleWhatsApp = () => {
     const message = `Hello! I'd like to speak with a water systems expert at APB Water Systems.`
     window.open(`https://wa.me/50660339416?text=${encodeURIComponent(message)}`, '_blank')

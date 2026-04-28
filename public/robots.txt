@@ -1,0 +1,39 @@
+# Robots.txt for APB Water Systems
+# SEO Guidelines for Search Engine Crawlers
+
+User-agent: *
+Allow: /
+Allow: /en
+Allow: /es
+Disallow: /admin
+Disallow: /private
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /*?*track=
+
+# Specific search engines
+User-agent: Googlebot
+Allow: /
+Allow: /en
+Allow: /es
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Allow: /en
+Allow: /es
+Crawl-delay: 0
+
+# Slow down aggressive crawlers
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://apbwatersystems.com/sitemap.xml
+
+# Google Search Console
+User-agent: Googlebot
+Allow: /

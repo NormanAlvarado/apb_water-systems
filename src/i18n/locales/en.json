@@ -1,0 +1,93 @@
+{
+  "common": {
+    "appName": "APB Water Systems",
+    "tagline": "Premium Water Treatment Solutions in Costa Rica",
+    "language": "English",
+    "español": "Español"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "waterConditioning": "Water Conditioning",
+    "drinkingWater": "Drinking Water",
+    "problemSolvingFilters": "Problem Solving Filters",
+    "constantPressure": "Constant Pressure",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "seo": {
+    "home": {
+      "title": "Water Treatment Systems Costa Rica | Softeners & Filters | APB Water Systems",
+      "description": "Leading water treatment solutions in Costa Rica. Premium water softeners, drinking water systems, UV filters & reverse osmosis. Expert installation & warranty."
+    },
+    "waterConditioning": {
+      "title": "Water Softeners Costa Rica | Pentair WaterTrust | APB Water Systems",
+      "description": "Professional water softening and conditioning solutions. Pentair WaterTrust Pro Series. Hard water treatment for residential & commercial use in Costa Rica."
+    },
+    "drinkingWater": {
+      "title": "Drinking Water Systems Costa Rica | Safe Filtered Water | APB Water Systems",
+      "description": "Pure drinking water systems for your home. Advanced filtration technology removes contaminants. Get crystal clear, safe water at every tap in Costa Rica."
+    },
+    "problemSolvingFilters": {
+      "title": "Water Filters Costa Rica | UV Disinfection | RainSoft RCUV™ | APB Water Systems",
+      "description": "Advanced water filtration solutions for contaminated water sources. UV disinfection, problem-solving filters. Bacteria & virus removal in Costa Rica."
+    },
+    "constantPressure": {
+      "title": "Water Pressure Systems Costa Rica | Constant Pressure Solutions | APB Water Systems",
+      "description": "Professional water pressure solutions. Constant pressure systems for homes and commercial properties. Reliable water supply throughout Costa Rica."
+    },
+    "about": {
+      "title": "About APB Water Systems | Costa Rica Water Treatment Experts",
+      "description": "Learn about APB Water Systems, your trusted partner for water treatment solutions in Costa Rica. RainSoft distributor with 20+ years of expertise."
+    },
+    "contact": {
+      "title": "Contact APB Water Systems | Water Treatment Support Costa Rica",
+      "description": "Get in touch with APB Water Systems for water treatment solutions. Free consultation, expert advice, and installation services throughout Costa Rica."
+    }
+  },
+  "hero": {
+    "title": "Pure, Clean Water for Every Home",
+    "subtitle": "Advanced water treatment solutions for Costa Rica's unique water challenges",
+    "viewProducts": "View Products",
+    "contact": "Contact Us"
+  },
+  "products": {
+    "waterConditioning": {
+      "title": "Water Conditioning",
+      "description": "Professional water softening systems to eliminate hard water problems"
+    },
+    "drinkingWater": {
+      "title": "Drinking Water",
+      "description": "Pure, safe drinking water systems with advanced filtration technology"
+    },
+    "problemSolving": {
+      "title": "Problem Solving Filters",
+      "description": "Specialized filtration solutions for specific water quality issues"
+    },
+    "constantPressure": {
+      "title": "Constant Pressure Systems",
+      "description": "Maintain optimal water pressure throughout your property"
+    }
+  },
+  "buttons": {
+    "getQuote": "Get Quote",
+    "viewFeatures": "View Features",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "viewProducts": "View Products",
+    "send": "Send"
+  },
+  "footer": {
+    "company": "Company",
+    "products": "Products",
+    "resources": "Resources",
+    "contact": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "followUs": "Follow Us",
+    "copyright": "© 2026 APB Water Systems. All rights reserved.",
+    "distributor": "As an authorized distributor of RainSoft products"
+  }
+}

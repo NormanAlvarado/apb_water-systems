@@ -1,11 +1,24 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
 import ProductFeaturesModal from '../components/ProductFeaturesModal'
 import PageLoader from '../components/PageLoader'
+import { useMetaTags } from '../hooks/useMetaTags'
 
 export default function DrinkingWater() {
+  const { t } = useTranslation()
+
+  useMetaTags({
+    title: t('seo.drinkingWater.title'),
+    description: t('seo.drinkingWater.description'),
+    keywords: 'drinking water systems, water filters, safe drinking water, Costa Rica',
+    ogTitle: t('seo.drinkingWater.title'),
+    ogDescription: t('seo.drinkingWater.description'),
+    canonicalUrl: 'https://apbwatersystems.com/products/drinking-water'
+  })
+
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isFeaturesModalOpen, setIsFeaturesModalOpen] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState('')

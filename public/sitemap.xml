@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Home Pages -->
+  <url>
+    <loc>https://apbwatersystems.com/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/en</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/es</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en" />
+  </url>
+
+  <!-- About Pages -->
+  <url>
+    <loc>https://apbwatersystems.com/about</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/about" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/en/about</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/about" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/es/about</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/about" />
+  </url>
+
+  <!-- Contact Pages -->
+  <url>
+    <loc>https://apbwatersystems.com/contact</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/contact" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/en/contact</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/contact" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/es/contact</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/contact" />
+  </url>
+
+  <!-- Water Conditioning Product Pages -->
+  <url>
+    <loc>https://apbwatersystems.com/products/water-conditioning</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/products/water-conditioning" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/products/water-conditioning" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/en/products/water-conditioning</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/products/water-conditioning" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/es/products/water-conditioning</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/products/water-conditioning" />
+  </url>
+
+  <!-- Drinking Water Product Pages -->
+  <url>
+    <loc>https://apbwatersystems.com/products/drinking-water</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/products/drinking-water" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/products/drinking-water" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/en/products/drinking-water</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/products/drinking-water" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/es/products/drinking-water</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/products/drinking-water" />
+  </url>
+
+  <!-- Problem Solving Filters Product Pages -->
+  <url>
+    <loc>https://apbwatersystems.com/products/problem-solving-filters</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/products/problem-solving-filters" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/products/problem-solving-filters" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/en/products/problem-solving-filters</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/products/problem-solving-filters" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/es/products/problem-solving-filters</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/products/problem-solving-filters" />
+  </url>
+
+  <!-- Constant Pressure Product Pages -->
+  <url>
+    <loc>https://apbwatersystems.com/products/constant-pressure</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/products/constant-pressure" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/products/constant-pressure" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/en/products/constant-pressure</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://apbwatersystems.com/es/products/constant-pressure" />
+  </url>
+  
+  <url>
+    <loc>https://apbwatersystems.com/es/products/constant-pressure</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apbwatersystems.com/en/products/constant-pressure" />
+  </url>
+
+</urlset>

@@ -1,11 +1,24 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
 import ProductFeaturesModal from '../components/ProductFeaturesModal'
 import PageLoader from '../components/PageLoader'
+import { useMetaTags } from '../hooks/useMetaTags'
 
 export default function WaterConditioning() {
+  const { t } = useTranslation()
+
+  useMetaTags({
+    title: t('seo.waterConditioning.title'),
+    description: t('seo.waterConditioning.description'),
+    keywords: 'water softeners, water conditioning, Pentair WaterTrust, Costa Rica',
+    ogTitle: t('seo.waterConditioning.title'),
+    ogDescription: t('seo.waterConditioning.description'),
+    canonicalUrl: 'https://apbwatersystems.com/products/water-conditioning'
+  })
+
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isFeaturesModalOpen, setIsFeaturesModalOpen] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState('')

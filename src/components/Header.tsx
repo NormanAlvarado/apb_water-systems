@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import apbLogo from '../assets/APBWSWhite.jpeg'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -151,6 +152,7 @@ export default function Header() {
 
           {/* Right Side - Phone & CTA */}
           <div className="hidden xl:flex items-center space-x-4">
+            <LanguageSwitcher />
             <a 
               href="tel:+50660339416" 
               className="text-blue-600 font-semibold hover:text-blue-700 transition-colors flex items-center"
@@ -188,6 +190,9 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="xl:hidden py-4 border-t animate-[slideDown_0.3s_ease-out]">
             <nav className="flex flex-col space-y-3">
+              <div className="px-4">
+                <LanguageSwitcher />
+              </div>
               <div className="text-gray-900 py-2 font-semibold">Products</div>
               <Link 
                 to="/products/water-conditioning" 

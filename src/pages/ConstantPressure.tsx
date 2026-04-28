@@ -1,10 +1,23 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
 import PageLoader from '../components/PageLoader'
+import { useMetaTags } from '../hooks/useMetaTags'
 
 export default function ConstantPressure() {
+  const { t } = useTranslation()
+
+  useMetaTags({
+    title: t('seo.constantPressure.title'),
+    description: t('seo.constantPressure.description'),
+    keywords: 'constant pressure water systems, water pressure, Costa Rica',
+    ogTitle: t('seo.constantPressure.title'),
+    ogDescription: t('seo.constantPressure.description'),
+    canonicalUrl: 'https://apbwatersystems.com/products/constant-pressure'
+  })
+
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const benefits = [

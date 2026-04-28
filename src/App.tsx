@@ -14,6 +14,25 @@ function App() {
     <>
       <ScrollToTop />
       <Routes>
+        {/* English Routes */}
+        <Route path="/en" element={<Home />} />
+        <Route path="/en/about" element={<About />} />
+        <Route path="/en/contact" element={<Contact />} />
+        <Route path="/en/products/water-conditioning" element={<WaterConditioning />} />
+        <Route path="/en/products/drinking-water" element={<DrinkingWater />} />
+        <Route path="/en/products/problem-solving-filters" element={<ProblemSolvingFilters />} />
+        <Route path="/en/products/constant-pressure" element={<ConstantPressure />} />
+        
+        {/* Spanish Routes */}
+        <Route path="/es" element={<Home />} />
+        <Route path="/es/about" element={<About />} />
+        <Route path="/es/contact" element={<Contact />} />
+        <Route path="/es/products/water-conditioning" element={<WaterConditioning />} />
+        <Route path="/es/products/drinking-water" element={<DrinkingWater />} />
+        <Route path="/es/products/problem-solving-filters" element={<ProblemSolvingFilters />} />
+        <Route path="/es/products/constant-pressure" element={<ConstantPressure />} />
+        
+        {/* Default Routes (will redirect based on browser language) */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

@@ -1,0 +1,93 @@
+{
+  "common": {
+    "appName": "APB Water Systems",
+    "tagline": "Soluciones Premium de Tratamiento de Agua en Costa Rica",
+    "language": "Español",
+    "english": "English"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "products": "Productos",
+    "waterConditioning": "Ablandadores de Agua",
+    "drinkingWater": "Agua Potable",
+    "problemSolvingFilters": "Filtros Especializados",
+    "constantPressure": "Presión Constante",
+    "contact": "Contacto",
+    "blog": "Blog"
+  },
+  "seo": {
+    "home": {
+      "title": "Sistemas de Tratamiento de Agua Costa Rica | Ablandadores y Filtros | APB Water Systems",
+      "description": "Soluciones líder en tratamiento de agua en Costa Rica. Ablandadores de agua premium, sistemas de agua potable, filtros UV y ósmosis inversa. Instalación profesional y garantía."
+    },
+    "waterConditioning": {
+      "title": "Ablandadores de Agua Costa Rica | Pentair WaterTrust | APB Water Systems",
+      "description": "Soluciones profesionales de ablandamiento y acondicionamiento de agua. Serie Pentair WaterTrust Pro. Tratamiento de agua dura para uso residencial y comercial."
+    },
+    "drinkingWater": {
+      "title": "Sistemas de Agua Potable Costa Rica | Agua Filtrada Segura | APB Water Systems",
+      "description": "Sistemas de agua potable pura para su hogar. Tecnología de filtración avanzada elimina contaminantes. Agua cristalina y segura en cada grifo de Costa Rica."
+    },
+    "problemSolvingFilters": {
+      "title": "Filtros de Agua Costa Rica | Desinfección UV | RainSoft RCUV™ | APB Water Systems",
+      "description": "Soluciones avanzadas de filtración de agua para fuentes contaminadas. Desinfección UV, filtros especializados. Eliminación de bacterias y virus en Costa Rica."
+    },
+    "constantPressure": {
+      "title": "Sistemas de Presión de Agua Costa Rica | Soluciones de Presión Constante | APB Water Systems",
+      "description": "Soluciones profesionales de presión de agua. Sistemas de presión constante para hogares y propiedades comerciales. Suministro confiable en Costa Rica."
+    },
+    "about": {
+      "title": "Acerca de APB Water Systems | Expertos en Tratamiento de Agua Costa Rica",
+      "description": "Conozca APB Water Systems, su socio de confianza en soluciones de tratamiento de agua. Distribuidor autorizado de RainSoft con más de 20 años de experiencia."
+    },
+    "contact": {
+      "title": "Contactar APB Water Systems | Soporte de Tratamiento de Agua Costa Rica",
+      "description": "Póngase en contacto con APB Water Systems para soluciones de tratamiento de agua. Consulta gratuita, asesoría experta y servicios de instalación en Costa Rica."
+    }
+  },
+  "hero": {
+    "title": "Agua Pura y Limpia para Cada Hogar",
+    "subtitle": "Soluciones avanzadas de tratamiento de agua para los desafíos únicos de Costa Rica",
+    "viewProducts": "Ver Productos",
+    "contact": "Contactar"
+  },
+  "products": {
+    "waterConditioning": {
+      "title": "Ablandadores de Agua",
+      "description": "Sistemas profesionales de ablandamiento para eliminar problemas de agua dura"
+    },
+    "drinkingWater": {
+      "title": "Agua Potable",
+      "description": "Sistemas de agua potable pura y segura con tecnología de filtración avanzada"
+    },
+    "problemSolving": {
+      "title": "Filtros Especializados",
+      "description": "Soluciones de filtración especializadas para problemas específicos de calidad de agua"
+    },
+    "constantPressure": {
+      "title": "Sistemas de Presión Constante",
+      "description": "Mantenga la presión de agua óptima en toda su propiedad"
+    }
+  },
+  "buttons": {
+    "getQuote": "Solicitar Cotización",
+    "viewFeatures": "Ver Características",
+    "learnMore": "Aprender Más",
+    "contactUs": "Contactarnos",
+    "viewProducts": "Ver Productos",
+    "send": "Enviar"
+  },
+  "footer": {
+    "company": "Empresa",
+    "products": "Productos",
+    "resources": "Recursos",
+    "contact": "Contacto",
+    "phone": "Teléfono",
+    "email": "Correo Electrónico",
+    "address": "Dirección",
+    "followUs": "Síguenos",
+    "copyright": "© 2026 APB Water Systems. Todos los derechos reservados.",
+    "distributor": "Como distribuidor autorizado de productos RainSoft"
+  }
+}

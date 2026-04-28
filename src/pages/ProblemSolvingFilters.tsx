@@ -1,11 +1,24 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import QuoteModal from '../components/QuoteModal'
 import PageLoader from '../components/PageLoader'
 import ProductFeaturesModal from '../components/ProductFeaturesModal'
+import { useMetaTags } from '../hooks/useMetaTags'
 
 export default function ProblemSolvingFilters() {
+  const { t } = useTranslation()
+
+  useMetaTags({
+    title: t('seo.problemSolvingFilters.title'),
+    description: t('seo.problemSolvingFilters.description'),
+    keywords: 'water filters, UV disinfection, problem solving filters, Costa Rica',
+    ogTitle: t('seo.problemSolvingFilters.title'),
+    ogDescription: t('seo.problemSolvingFilters.description'),
+    canonicalUrl: 'https://apbwatersystems.com/products/problem-solving-filters'
+  })
+
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState('')
   const [isFeaturesModalOpen, setIsFeaturesModalOpen] = useState(false)
